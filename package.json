@@ -10,7 +10,8 @@
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "lintfix": "yarn lint:js --fix",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "core-js": "^3.19.3",
