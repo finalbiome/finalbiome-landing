@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height>
+  <v-container class="d-flex">
     <v-col>
       <v-row class="header-first">
         finalbiome
@@ -84,9 +84,11 @@ export default {
   width: 18em;
 }
 .container {
+  height: 100vh;
   max-width: none;
   background-image: url("~assets/images/hero-bg.png");
   background-position: bottom;
   background-size: contain;
+  align-items: center;
 }
 </style>
