@@ -51,7 +51,7 @@ export default {
   @media only screen and (orientation: landscape) {
     // font-size: 50px;
     font-size: 4.6vh;
-    margin-top: 1.2vh;
+    margin-top: 1.2vh !important;
   }
   font-size: 5.5vw;
 
@@ -60,7 +60,7 @@ export default {
   font-weight: 650;
   line-height: 100%;
   /* or 50px */
-  margin-top: 3.2vh;
+  margin-top: 3.2vh !important;
 
   text-align: center;
 
@@ -77,7 +77,7 @@ export default {
   line-height: 1.4em;
   text-align: center;
 
-  margin-top: 4.6vh;
+  margin-top: 4.6vh !important;
   margin-left: auto;
   margin-right: auto;
 
