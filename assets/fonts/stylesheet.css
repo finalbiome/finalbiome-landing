@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Museo';
+    src: url('Museo-Cyrl-300.otf') format("opentype");
+
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo';
+    src: url('Museo-Cyrl-900.otf') format("opentype");
+
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo';
+    src: url('Museo-Cyrl-300-Italic.otf') format("opentype");
+
+    font-weight: 300;
+    font-style: italic;
+}
