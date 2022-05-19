@@ -11,13 +11,14 @@
             <span class="f-accent">Never.</span>
           </div>
           <div>
-            <v-btn
+            <!-- <v-btn
               class="btn-wp"
               large
               rounded
             >
               White Paper
-            </v-btn>
+            </v-btn> -->
+            <ButtonComponent class="sbtn" caption="White Paper" />
           </div>
         </div>
         <div class="bf-image-cont bf2">
@@ -53,8 +54,10 @@
 </template>
 
 <script>
+import ButtonComponent from './ButtonComponent.vue'
 export default {
-  name: 'SolutionSection'
+  name: 'SolutionSection',
+  components: { ButtonComponent }
 }
 </script>
 
@@ -144,29 +147,9 @@ export default {
   margin-top: -10em;
 }
 
-.btn-wp {
-  text-transform: none;
-  color: #1D1D1D;
-  background: linear-gradient(92.05deg, #2DEA40 3.12%, #BFFF37 81.34%);
-  box-shadow: 0px 5px 15px rgba(143, 255, 0, 0.2);
-  // border-radius: 90px;
-
-  font-family: 'Museo';
-  font-style: normal;
-  font-weight: 650;
-  font-size: 24px;
-  line-height: 40px;
-  letter-spacing: normal;
-  text-indent: 0;
-  padding: 0.865em 2.188em !important;
-  height: fit-content !important;
-  border-radius: 2em;
-
+.sbtn {
   margin-top: 3em;
   margin-bottom: 2em;
-
-  @include fluid-type(font-size, $minScreen, $maxScreen, 1.125rem, 1.5rem); // 17px - 16px
-
 }
 
 </style>
