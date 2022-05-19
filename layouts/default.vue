@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :style="{background: $vuetify.theme.themes.dark.background}">
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
