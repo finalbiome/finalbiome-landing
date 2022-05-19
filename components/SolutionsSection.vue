@@ -163,6 +163,7 @@ export default {
   border-radius: 2em;
 
   margin-top: 3em;
+  margin-bottom: 2em;
 
   @include fluid-type(font-size, $minScreen, $maxScreen, 1.125rem, 1.5rem); // 17px - 16px
 
