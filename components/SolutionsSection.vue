@@ -17,7 +17,7 @@
       </div>
       <div class="bf-wrapper-2 d-flex flex-wrap">
         <div class="bf-image-cont bf3">
-          <!-- <img class="bf-image" src="~/assets/images/bf2.png"> -->
+          <img class="bf-image" src="~/assets/images/bf2.png">
         </div>
         <div class="big-feature bf4">
           <h2>Mass adoption without the mass</h2>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="bf-image-cont bf6">
-          <!-- <img class="bf-image" src="~/assets/images/bf3.png"> -->
+          <img class="bf-image" src="~/assets/images/bf3.png">
         </div>
       </div>
     </div>
@@ -71,6 +71,7 @@ export default {
   flex-grow: 2;
   max-width: 37em;
   flex-basis: 25em;
+  z-index: 1;
 }
 .big-feature-content {
   font-weight: 400;
@@ -82,6 +83,9 @@ export default {
 }
 .f-accent {
   color: #fff;
+}
+.bf-wrapper-2, .bf-wrapper-3 {
+  align-items: center;
 }
 .bf-image {
   object-fit: contain;
@@ -119,6 +123,9 @@ export default {
 }
 .bf6 {
   order: 6;
+}
+.bf3 > img, .bf6 > img {
+  margin-top: -4em;
 }
 
 </style>
