@@ -10,6 +10,15 @@
             And for gamers the confidence that the rules of the game will not change.
             <span class="f-accent">Never.</span>
           </div>
+          <div>
+            <v-btn
+              class="btn-wp"
+              large
+              rounded
+            >
+              White Paper
+            </v-btn>
+          </div>
         </div>
         <div class="bf-image-cont bf2">
           <img class="bf-image" src="~/assets/images/bf1-1.png">
@@ -96,7 +105,7 @@ export default {
   flex-basis: 25em;
 
   max-width: 45em;
-  border-style: dashed;
+  // border-style: dashed;
 }
 .bf1 {
   order: 1;
@@ -120,12 +129,43 @@ export default {
 }
 .bf5 {
   order: 5;
+  margin-bottom: 10em;
 }
 .bf6 {
   order: 6;
 }
-.bf3 > img, .bf6 > img {
+.bf3 > img {
   margin-top: -4em;
+  margin-left: -2em;
+}
+
+.bf6 > img {
+  margin-top: -4em;
+  margin-top: -10em;
+}
+
+.btn-wp {
+  text-transform: none;
+  color: #1D1D1D;
+  background: linear-gradient(92.05deg, #2DEA40 3.12%, #BFFF37 81.34%);
+  box-shadow: 0px 5px 15px rgba(143, 255, 0, 0.2);
+  // border-radius: 90px;
+
+  font-family: 'Museo';
+  font-style: normal;
+  font-weight: 650;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-indent: 0;
+  padding: 0.865em 2.188em !important;
+  height: fit-content !important;
+  border-radius: 2em;
+
+  margin-top: 3em;
+
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1.125rem, 1.5rem); // 17px - 16px
+
 }
 
 </style>
