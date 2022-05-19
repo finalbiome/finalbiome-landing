@@ -4,6 +4,12 @@
       <h1>Roadmap</h1>
     </div>
     <div class="roadmap-outer-wrapper">
+      <div class="trees-wrapper">
+        <div class="tree-stub" />
+        <img id="tree-1" class="tree-img" src="~/assets/images/tree-1.png">
+        <img id="tree-2" class="tree-img" src="~/assets/images/tree-2.png">
+        <img id="tree-3" class="tree-img" src="~/assets/images/tree-3.png">
+      </div>
       <div class="roadmap-line-wrapper">
         <div class="rm-phase-first-line" />
         <div id="rm-phase-green" class="rm-phase">
@@ -125,6 +131,7 @@ export default {
   width: 100%;
   overflow: hidden;
   position: relative;
+  margin-bottom: 10em;
 }
 
 .roadmap-line-wrapper {
@@ -141,6 +148,11 @@ export default {
   background: #fff;
   width: 100%;
   // transform: translateY(-50%)
+}
+
+.trees-wrapper {
+  width: max-content;
+  @include fluid-type(margin-top, $minScreen, $maxScreen, -20em, 0em);;
 }
 
 .rm-phase {
@@ -225,8 +237,8 @@ export default {
   // border-style: dotted;
   position: absolute;
   width: 40vw;
-  height: 4.8em;
-  top: 0;
+  height: 5em;
+  bottom: 0;
   right: 0;
   background: linear-gradient(270deg, #2C2C2C 5.73%, rgba(44, 44, 44, 0) 100%);
   z-index: 1;
@@ -235,8 +247,8 @@ export default {
   // border-style: dotted;
   position: absolute;
   width: 10vw;
-  height: 4.8em;
-  top: 0;
+  height: 5em;
+  bottom: 0;
   left: 0;
   background: linear-gradient(90deg, #2C2C2C 5.73%, rgba(44, 44, 44, 0) 100%);
   z-index: 1;
@@ -256,4 +268,25 @@ h1 {
   background: linear-gradient(180deg, #0B0B0B 0%, rgba(11, 11, 11, 0) 100%);
   transform: matrix(1, 0, 0, -1, 0, 0);
 }
+
+.tree-img {
+  opacity: .5;
+}
+#tree-1 {
+  margin-left: -1.2em;
+  width: 8.75em;
+}
+#tree-2 {
+  margin-left: 30.5em;
+  width: 17.5em;
+}
+#tree-3 {
+  margin-left: 33em;
+  width: 20.625em;
+}
+.tree-stub {
+  display: inline-block;
+  @include fluid-type(width, $minScreen, $maxScreen, 0.75em, 14em);;
+}
+
 </style>
