@@ -47,8 +47,8 @@ $circle-diameter: 80px;
 }
 .content-wrapper {
   background-color: #2C2C2C;
-  width: 420px;
-  height: 230px;
+  max-width: 420px;
+  min-height: 230px;
   border-radius: 30px;
   margin-top: calc(-#{$circle-diameter}/2);
 
@@ -67,6 +67,7 @@ h3 {
   margin-top: 1.875em;
   margin-bottom: 0.625em;
   line-height: 1.625em;
+  text-align: center;
 }
 
 </style>

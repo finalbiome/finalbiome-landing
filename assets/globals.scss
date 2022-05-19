@@ -104,14 +104,15 @@ h1 {
 
 h2 {
   @include fluid-type(font-size, $minScreen, $maxScreen, 1.375rem, $h2);
-	font-size: $h2;
+	// font-size: $h2;
 	// margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline}*2);
 }
 
 h3 {
-	font-size: $h3;
-	line-height: $h3;
-	margin-top: calc((#{$baseline} - #{$h3}) + #{$baseline}*2);
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1.125rem, $h3);
+	// font-size: $h3;
+	// line-height: $h3;
+	// margin-top: calc((#{$baseline} - #{$h3}) + #{$baseline}*2);
 }
 
 h4 {

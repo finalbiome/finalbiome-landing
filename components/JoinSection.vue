@@ -1,7 +1,7 @@
 <template>
   <div class="join-wrapper">
     <div>
-      <h2>Join With As</h2>
+      <h1>Join With As</h1>
     </div>
 
     <div class="join-buttons-wrap">
