@@ -31,7 +31,7 @@ export default {
   flex-direction: column;
   align-items: center;
   row-gap: 1em;
-  padding-bottom: 6em;
+  padding-bottom: 10em;
 }
 .join-buttons-wrap {
   display: flex;
