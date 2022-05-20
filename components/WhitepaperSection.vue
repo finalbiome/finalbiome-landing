@@ -189,7 +189,7 @@ ul li {
   }
   color: #4F4F4F;
   margin-top: 4em;
-  margin-bottom: 2.222em;
+  padding-bottom: 2.222em;
   @include fluid-type(font-size, $minScreen, $maxScreen, 0.875rem, 1rem); // 14px - 16px
 }
 
