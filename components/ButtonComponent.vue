@@ -4,6 +4,9 @@
       class="btn-wp"
       large
       rounded
+      :href="linkUrl"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {{ caption }}
     </v-btn>
@@ -13,7 +16,7 @@
 <script>
 export default {
   name: 'ButtonComponent',
-  props: ['caption']
+  props: ['caption', 'linkUrl']
 }
 </script>
 

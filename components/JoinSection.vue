@@ -5,7 +5,7 @@
     </div>
 
     <div class="join-buttons-wrap">
-      <ButtonComponent caption="White Paper" />
+      <ButtonComponent caption="White Paper" link-url="/FinalBiomeWhitepaper.pdf" />
       <ButtonComponent caption="Get White List" />
     </div>
   </div>

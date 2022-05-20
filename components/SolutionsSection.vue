@@ -18,7 +18,7 @@
             >
               White Paper
             </v-btn> -->
-            <ButtonComponent class="sbtn" caption="White Paper" />
+            <ButtonComponent class="sbtn" caption="White Paper" link-url="/FinalBiomeWhitepaper.pdf" />
           </div>
         </div>
         <div class="bf-image-cont bf2">

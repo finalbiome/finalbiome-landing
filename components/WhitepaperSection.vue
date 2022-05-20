@@ -15,31 +15,33 @@
         </ul>
       </div>
       <div class="wp-download-wrapper">
-        <div class="wp-dl-rect-wrap">
-          <div class="wp-dl-rect">
-            <div class="wp-dl-img">
-              <img src="~/assets/images/paper.svg">
-            </div>
-            <div class="wp-dl-header">
-              English
-            </div>
-            <div class="wp-dl-desc">
-              View PDF
+        <a href="/FinalBiomeWhitepaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Whitepaper">
+          <div class="wp-dl-rect-wrap">
+            <div class="wp-dl-rect">
+              <div class="wp-dl-img">
+                <img src="~/assets/images/paper.svg">
+              </div>
+              <div class="wp-dl-header">
+                English
+              </div>
+              <div class="wp-dl-desc">
+                View PDF
+              </div>
             </div>
           </div>
-        </div>
+        </a>
         <ButtonComponent class="wp-btn" caption="Get White List" />
       </div>
-      <div class="break" />
-      <div class="wp-social-links">
-        <SocialLinkComponent link-url="https://twitter.com/FinalBiome" network="twitter" />
-        <SocialLinkComponent link-url="https://finalbiome.medium.com" network="medium" />
-        <SocialLinkComponent link-url="https://www.linkedin.com/company/finalbiome" network="linkedin" />
-      </div>
-      <div class="break" />
-      <div class="footer">
-        Copyright © 2022 FinalBiome. All rights reserved.
-      </div>
+    </div>
+    <div class="break" />
+    <div class="wp-social-links">
+      <SocialLinkComponent link-url="https://twitter.com/FinalBiome" network="twitter" />
+      <SocialLinkComponent link-url="https://finalbiome.medium.com" network="medium" />
+      <SocialLinkComponent link-url="https://www.linkedin.com/company/finalbiome" network="linkedin" />
+    </div>
+    <div class="break" />
+    <div class="footer">
+      Copyright © 2022 FinalBiome. All rights reserved.
     </div>
   </div>
 </template>
@@ -194,6 +196,10 @@ ul li {
 .break {
   flex-basis: 100%;
   height: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 </style>
