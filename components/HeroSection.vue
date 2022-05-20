@@ -1,17 +1,15 @@
 <template>
-  <v-container class="d-flex">
-    <v-col>
-      <v-row class="header-first">
-        finalbiome
-      </v-row>
-      <v-row class="header-second">
-        First decentralized game deployment platform
-      </v-row>
-      <v-row class="header-third">
-        Deploying a game on the blockchain has never been so easy
-      </v-row>
-    </v-col>
-  </v-container>
+  <div class="hero-wrapper">
+    <div class="header-first">
+      finalbiome
+    </div>
+    <div class="header-second">
+      First decentralized game deployment platform
+    </div>
+    <div class="header-third">
+      Deploying a game on the blockchain has never been so easy
+    </div>
+  </div>
 </template>
 
 <script>
@@ -21,9 +19,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row {
-  justify-content: center;
-}
 .header-first {
   @media only screen and (orientation: landscape) {
     // font-size: 70px;
@@ -83,12 +78,15 @@ export default {
 
   width: 18em;
 }
-.container {
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   max-width: none;
   background-image: url("~assets/images/hero-bg.png");
   background-position: bottom;
   background-size: contain;
   align-items: center;
+  justify-content: center;
 }
 </style>
