@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$circle-diameter: 80px;
+$circle-diameter: 5em; //80px;
 
 .feature-wrapper {
   display: flex;
@@ -42,14 +42,14 @@ $circle-diameter: 80px;
   justify-content: center;
 }
 .circle-img > img {
-  width: 64%;
+  width: 55%;
   z-index: 1;
 }
 .content-wrapper {
   background-color: #2C2C2C;
-  max-width: 420px;
-  min-height: 230px;
-  border-radius: 30px;
+  max-width: 26.25em; //420px;
+  min-height: 14.375em; //230px;
+  border-radius: 1.875em; //30px;
   margin-top: calc(-#{$circle-diameter}/2);
 
   display: flex;
