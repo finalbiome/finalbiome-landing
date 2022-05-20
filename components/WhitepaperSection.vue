@@ -34,7 +34,7 @@
       <div class="wp-social-links">
         <SocialLinkComponent link-url="https://twitter.com/FinalBiome" network="twitter" />
         <SocialLinkComponent link-url="https://finalbiome.medium.com" network="medium" />
-        <SocialLinkComponent link-url="https://https://www.linkedin.com/company/finalbiome" network="linkedin" />
+        <SocialLinkComponent link-url="https://www.linkedin.com/company/finalbiome" network="linkedin" />
       </div>
       <div class="break" />
       <div class="footer">
