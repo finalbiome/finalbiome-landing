@@ -197,9 +197,9 @@ ul li {
   flex-basis: 100%;
   height: 0;
 }
-a {
-  color: inherit;
-  text-decoration: none;
+.wp-download-wrapper > a {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 </style>
