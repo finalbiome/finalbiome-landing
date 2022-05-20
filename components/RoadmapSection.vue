@@ -123,7 +123,7 @@ export default {
   background-repeat: repeat-x;
   background-clip: border-box;
   background-blend-mode: multiply;
-  background-size: contain;
+  background-size: 1920px 332px;//3840px 664px;
   background-position: bottom;
 }
 
@@ -132,6 +132,7 @@ export default {
   overflow: hidden;
   position: relative;
   margin-bottom: 10em;
+  margin-top: -15em;
 }
 
 .roadmap-line-wrapper {
@@ -152,7 +153,8 @@ export default {
 
 .trees-wrapper {
   width: max-content;
-  @include fluid-type(margin-top, $minScreen, $maxScreen, -20em, 0em);;
+  @include fluid-type(margin-top, $minScreen, $maxScreen, -10em, 0em);;
+  z-index: 1;
 }
 
 .rm-phase {
