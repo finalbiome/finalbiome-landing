@@ -1,6 +1,6 @@
 <template>
   <div class="roadmap-wrapper">
-    <div>
+    <div ref="roadmap">
       <h1>Roadmap</h1>
     </div>
     <div class="roadmap-outer-wrapper">

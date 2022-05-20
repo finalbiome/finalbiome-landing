@@ -2,7 +2,7 @@
   <div class="wrapper d-flex">
     <div class="d-flex s-container flex-wrap">
       <div class="bf-wrapper-1 d-flex flex-wrap">
-        <div class="big-feature bf1">
+        <div ref="solution" class="big-feature bf1">
           <h1>Solution</h1>
           <div class="big-feature-content">
             FinalBiome gives game developers the ability to easily,

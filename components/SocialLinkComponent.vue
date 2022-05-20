@@ -20,8 +20,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/globals.scss';
-.social-link-wrapper {
-
+.social-link-wrapper > a > img {
+  width: 100%;
+  object-fit: contain;
+}
+.social-link-wrapper > a {
+  display: block;
 }
 
 </style>

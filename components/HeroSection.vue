@@ -1,18 +1,21 @@
 <template>
-  <div class="hero-wrapper">
-    <div class="header-first">
-      finalbiome
-    </div>
-    <div class="header-second">
-      First decentralized game deployment platform
-    </div>
-    <div class="header-third">
-      Deploying a game on the blockchain has never been so easy
-    </div>
-    <div class="backgroung-text">
-      <svg viewBox="0 0 85 40">
-        <text x="0" y="40">finalbiome</text>
-      </svg>
+  <div class="hero-outer-wrapper">
+    <MenuSection />
+    <div class="hero-wrapper">
+      <div class="header-first">
+        finalbiome
+      </div>
+      <div class="header-second">
+        First decentralized game deployment platform
+      </div>
+      <div class="header-third">
+        Deploying a game on the blockchain has never been so easy
+      </div>
+      <div class="backgroung-text">
+        <svg viewBox="0 0 85 40">
+          <text x="0" y="40">finalbiome</text>
+        </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -82,16 +85,24 @@ export default {
 
   width: 18em;
 }
-.hero-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  max-width: none;
+.hero-outer-wrapper {
   background-image: url("~assets/images/hero-bg.png");
   background-position: bottom;
   background-size: contain;
   background-size: 1500px;
+  height: 100vh;
+  max-width: none;
+}
+.hero-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 6.25em); // logo 3.75em + padding 2.5em
+  max-width: none;
+  // background-image: url("~assets/images/hero-bg.png");
+  // background-position: bottom;
+  // background-size: contain;
+  // background-size: 1500px;
   align-items: center;
   justify-content: center;
 }

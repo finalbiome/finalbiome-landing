@@ -1,6 +1,6 @@
 <template>
   <div class="whitepaper-wrapper">
-    <div class="wp-header1">
+    <div ref="whitepaper" class="wp-header1">
       <h1>Whitepaper</h1>
     </div>
     <div class="wp-inner-wrapper">
