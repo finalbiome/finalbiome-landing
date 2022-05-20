@@ -20,8 +20,8 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/globals.scss';
 .btn-wp {
-  text-transform: none;
-  color: #1D1D1D;
+  text-transform: none !important;
+  color: #1D1D1D !important;
   background: linear-gradient(92.05deg, #2DEA40 3.12%, #BFFF37 81.34%);
   box-shadow: 0px 0.208333em 0.625em rgba(143, 255, 0, 0.2);
 
