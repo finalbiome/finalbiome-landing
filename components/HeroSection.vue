@@ -9,6 +9,11 @@
     <div class="header-third">
       Deploying a game on the blockchain has never been so easy
     </div>
+    <div class="backgroung-text">
+      <svg viewBox="0 0 85 40">
+        <text x="0" y="40">finalbiome</text>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -78,6 +83,7 @@ export default {
   width: 18em;
 }
 .hero-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -85,7 +91,22 @@ export default {
   background-image: url("~assets/images/hero-bg.png");
   background-position: bottom;
   background-size: contain;
+  background-size: 1500px;
   align-items: center;
   justify-content: center;
+}
+
+.backgroung-text {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+
+  font-family: 'Museo';
+  font-weight: 900;
+  margin-bottom: -8px;
+}
+svg {
+  width: 100%;
+  fill: #1d1d1d;
 }
 </style>
