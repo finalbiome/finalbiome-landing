@@ -44,7 +44,6 @@ export default {
 }
 .header-second {
   @media only screen and (orientation: landscape) {
-    // font-size: 50px;
     font-size: 4.6vh;
     margin-top: 1.2vh !important;
   }
@@ -54,10 +53,10 @@ export default {
   font-style: normal;
   font-weight: 650;
   line-height: 100%;
-  /* or 50px */
   margin-top: 3.2vh !important;
 
   text-align: center;
+  padding: 0 1.2em;
 
 }
 .header-third {
