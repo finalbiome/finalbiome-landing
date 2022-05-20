@@ -36,7 +36,8 @@ export default {
 .join-buttons-wrap {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 5em;
+  // column-gap: 5em;
+  @include fluid-type(column-gap, $minScreen, $maxScreen, 1.875em, 5em); // 2em - 5em
   row-gap: 2em;
   justify-content: center;
 }
