@@ -25,7 +25,7 @@ export default {
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 3.125rem); // 250 - 30
   @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 3.125rem); // 50 - 30
   display: flex;
-  padding-top: 6vw;
+  padding-top: 8em;
   background-color: #1d1d1d;
   justify-content: center;
   flex-direction: column;
