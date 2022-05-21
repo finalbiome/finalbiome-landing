@@ -97,8 +97,9 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 6.25em); // logo 3.75em + padding 2.5em
   max-width: none;
+  width: 100vw;
+  height: 100vh;
   // background-image: url("~assets/images/hero-bg.png");
   // background-position: bottom;
   // background-size: contain;

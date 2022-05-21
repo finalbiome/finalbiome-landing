@@ -1,7 +1,9 @@
 <template>
   <div class="roadmap-wrapper">
-    <div ref="roadmap">
-      <h1>Roadmap</h1>
+    <div>
+      <h1 id="roadmap">
+        Roadmap
+      </h1>
     </div>
     <div class="roadmap-outer-wrapper">
       <div class="trees-wrapper">

@@ -1,7 +1,9 @@
 <template>
   <div class="whitepaper-wrapper">
-    <div ref="whitepaper" class="wp-header1">
-      <h1>Whitepaper</h1>
+    <div class="wp-header1">
+      <h1 id="whitepaper">
+        Whitepaper
+      </h1>
     </div>
     <div class="wp-inner-wrapper">
       <div class="wp-about">

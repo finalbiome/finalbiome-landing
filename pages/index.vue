@@ -16,10 +16,9 @@ import FeaturesSection from '~/components/FeaturesSection.vue'
 import JoinSection from '~/components/JoinSection.vue'
 import RoadmapSection from '~/components/RoadmapSection.vue'
 import WhitepaperSection from '~/components/WhitepaperSection.vue'
-import MenuSection from '~/components/MenuSection.vue'
 
 export default {
   name: 'IndexPage',
-  components: { HeroSection, SolutionsSection, FeaturesSection, JoinSection, RoadmapSection, WhitepaperSection, MenuSection }
+  components: { HeroSection, SolutionsSection, FeaturesSection, JoinSection, RoadmapSection, WhitepaperSection }
 }
 </script>
