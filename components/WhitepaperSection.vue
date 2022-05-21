@@ -24,7 +24,7 @@
                 <img src="~/assets/images/paper.svg">
               </div>
               <div class="wp-dl-header">
-                English
+                Whitepaper
               </div>
               <div class="wp-dl-desc">
                 View PDF
