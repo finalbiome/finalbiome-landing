@@ -15,7 +15,13 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'og-type', property: 'og:type', content: 'website' },
+      { hid: 'og-title', property: 'og:title', content: 'finalbiome' },
+      { hid: 'og-desc', property: 'og:description', content: 'Decentralized game deployment platform' },
+      { hid: 'og-image', property: 'og:image', content: 'https://finalbiome-landing.web.app/finalbiome-preview1200x630.jpg' },
+      { hid: 'og-url', property: 'og:url', content: 'https://finalbiome-landing.web.app/' },
+      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
