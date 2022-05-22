@@ -7,6 +7,7 @@
       :href="linkUrl"
       target="_blank"
       rel="noopener noreferrer"
+      @click="btnClick"
     >
       {{ caption }}
     </v-btn>
@@ -16,7 +17,18 @@
 <script>
 export default {
   name: 'ButtonComponent',
-  props: ['caption', 'linkUrl']
+  props: ['caption', 'linkUrl'],
+  methods: {
+    btnClick (event) {
+      const btnCaption = event.target.innerText
+      // send event to GA
+      if (gtag) {
+        gtag('event', 'click', {
+          button: btnCaption
+        })
+      }
+    }
+  }
 }
 </script>
 

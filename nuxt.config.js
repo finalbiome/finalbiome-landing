@@ -24,6 +24,13 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Noto+Sans:300,400,700,400italic,700italic&subset=latin,latin-ext'
       }
+    ],
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-8GEYRKY3BT',
+        async: true,
+        strategy: 'lazyOnload'
+      }
     ]
   },
 
