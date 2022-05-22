@@ -1,48 +1,54 @@
 <template>
   <div class="waitlist-wrapper">
-    <div class="waitlist-description">
-      <h1>
-        WaitListComponent
-      </h1>
-    </div>
-    <div class="waitlist-form">
-      <ValidationObserver
-        ref="observer"
-        v-slot="{ invalid }"
-        mode="eager"
-      >
-        <form
-          ref="form"
-          action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
-          method="POST"
-          @submit.prevent="submit"
+    <ButtonComponent
+      caption="Wait List"
+      class="wl-btn"
+    />
+
+    <v-dialog
+      v-model="dialog"
+      max-width="600px"
+      activator=".waitlist-wrapper > .wl-btn"
+    >
+      <div class="waitlist-form">
+        <ValidationObserver
+          ref="observer"
+          v-slot="{ invalid }"
+          mode="eager"
         >
-          <ValidationProvider
-            v-slot="{ errors }"
-            name="email"
-            rules="required|email"
+          <form
+            ref="form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
+            method="POST"
+            @submit.prevent="submit"
           >
-            <v-text-field
-              v-model="email"
-              :error-messages="errors"
-              label="E-mail"
-              required
-              name="entry.973815278"
-            />
-          </ValidationProvider>
-          <v-btn
-            class="mr-4"
-            type="submit"
-            :disabled="invalid"
-          >
-            submit
-          </v-btn>
-          <v-btn @click="clear">
-            clear
-          </v-btn>
-        </form>
-      </ValidationObserver>
-    </div>
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="email"
+              rules="required|email"
+            >
+              <v-text-field
+                v-model="email"
+                :error-messages="errors"
+                label="E-mail"
+                required
+                name="entry.973815278"
+              />
+            </ValidationProvider>
+            <v-btn
+              class="mr-4"
+              type="submit"
+              :disabled="invalid"
+            >
+              submit
+            </v-btn>
+            <v-btn @click="clear">
+              clear
+            </v-btn>
+          </form>
+        </ValidationObserver>
+      </div>
+    </v-dialog>
   </div>
 </template>
 
@@ -64,7 +70,8 @@ export default {
   name: 'WaitListComponent',
   components: { ValidationProvider, ValidationObserver },
   data: () => ({
-    email: ''
+    email: '',
+    dialog: false
   }),
   methods: {
     submit () {
@@ -87,8 +94,24 @@ export default {
         .then(() => {
           console.log('sent')
           this.clear()
+          // send event to GA
+          if (gtag) {
+            gtag('event', 'submit', {
+              origin: 'wait_list'
+            })
+          }
         })
-        .catch(console.error)
+        .catch((e) => {
+          console.error(e)
+          // send error to GA
+          if (gtag) {
+            gtag('event', 'exception', {
+              description: e,
+              fatal: false
+            })
+          }
+        })
+      this.dialog = false
     },
     clear () {
       this.email = ''
