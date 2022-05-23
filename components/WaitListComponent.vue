@@ -161,7 +161,7 @@ export default {
     @include fluid-type(padding-top, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
     padding-bottom: 2em;
   }
-  padding: 1em;
+  padding: 2em;
   background-color: $backgroung-main;
 }
 .wl-dialog-desc {
