@@ -21,7 +21,7 @@
     <FeatureComponent
       :img-idx="3"
       title="Financial Model and Monetization"
-      text="FinalBiome brings back the classic ways (methods)
+      text="FinalBiome brings back the classic methods
       to monetize games and evaluate the financial model"
     />
     <FeatureComponent
