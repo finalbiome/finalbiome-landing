@@ -198,4 +198,7 @@ export default {
   padding: 0 !important;
   font-size: 1em !important;
 }
+.theme--dark.v-card {
+  background-color: $backgroung-main !important;
+}
 </style>
