@@ -120,7 +120,7 @@ nav[role="menu"] {
   label {
     color:#fff;
     text-decoration:none;
-    font-size: 1.4em;
+    font-size: 1.125em;
     transition:color .3s ease-in-out;
   }
 
@@ -129,6 +129,8 @@ nav[role="menu"] {
     margin: 0 auto;
     width:100%;
     list-style:none;
+    display: flex;
+    align-items: center;
 
     > li {
       float:left;
@@ -143,7 +145,7 @@ nav[role="menu"] {
       }
 
       &:last-of-type {
-        float: right;
+        margin-left: auto;
       }
     }
   }
@@ -174,7 +176,7 @@ nav[role="menu"] {
       width:100%;
       min-height:2.25em;
       padding:.45em;
-      font-size:1.1em;
+      font-size:1em;
       margin:0;
     }
 
