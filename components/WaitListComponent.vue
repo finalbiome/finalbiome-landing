@@ -118,7 +118,7 @@ export default {
         body: data
       })
         .then(() => {
-          console.log('sent')
+          // console.log('sent')
           this.clear()
           // send event to GA
           if (gtag) {
