@@ -7,46 +7,63 @@
 
     <v-dialog
       v-model="dialog"
-      max-width="600px"
+      max-width="37.5em"
       activator=".waitlist-wrapper > .wl-btn"
+      :fullscreen="$vuetify.breakpoint.xsOnly"
+      :hide-overlay="$vuetify.breakpoint.xsOnly"
     >
-      <div class="waitlist-form">
-        <ValidationObserver
-          ref="observer"
-          v-slot="{ invalid }"
-          mode="eager"
-        >
-          <form
-            ref="form"
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
-            method="POST"
-            @submit.prevent="submit"
+      <div class="wl-dialod">
+        <h2>
+          The finalbiome is near
+        </h2>
+        <div class="wl-dialog-desc">
+          Do not miss the chance to get great opportunities as the first
+        </div>
+        <div class="waitlist-form">
+          <ValidationObserver
+            ref="observer"
+            v-slot="{ invalid }"
+            mode="eager"
           >
-            <ValidationProvider
-              v-slot="{ errors }"
-              name="email"
-              rules="required|email"
+            <form
+              ref="form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
+              method="POST"
+              @submit.prevent="submit"
             >
-              <v-text-field
-                v-model="email"
-                :error-messages="errors"
-                label="E-mail"
-                required
-                name="entry.973815278"
+              <ValidationProvider
+                v-slot="{ errors }"
+                name="email"
+                rules="required|email"
+              >
+                <v-text-field
+                  v-model="email"
+                  :error-messages="errors"
+                  label="E-mail"
+                  required
+                  name="entry.973815278"
+                />
+              </ValidationProvider>
+              <v-select
+                v-model="selectRole"
+                :items="itemsRole"
+                label="Who you are?"
+                name="entry.198554027"
               />
-            </ValidationProvider>
-            <v-btn
-              class="mr-4"
-              type="submit"
-              :disabled="invalid"
-            >
-              submit
-            </v-btn>
-            <v-btn @click="clear">
-              clear
-            </v-btn>
-          </form>
-        </ValidationObserver>
+              <div class="wl-buttons-wrapper">
+                <v-btn
+                  type="submit"
+                  :disabled="invalid"
+                >
+                  submit
+                </v-btn>
+                <v-btn class="wl-dl-btn-close" @click="close">
+                  close
+                </v-btn>
+              </div>
+            </form>
+          </ValidationObserver>
+        </div>
       </div>
     </v-dialog>
   </div>
@@ -71,6 +88,12 @@ export default {
   components: { ValidationProvider, ValidationObserver },
   data: () => ({
     email: '',
+    selectRole: '',
+    itemsRole: [
+      'Gamer',
+      'Developer',
+      'Both'
+    ],
     dialog: false
   }),
   methods: {
@@ -115,12 +138,40 @@ export default {
     },
     clear () {
       this.email = ''
+      this.selectRole = ''
       this.$refs.observer.reset()
+    },
+    close () {
+      this.dialog = false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+@import '~/assets/globals.scss';
+.wl-dialod {
+  @media only screen and (max-width: 37.5em) {
+    @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+    @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+    @include fluid-type(padding-top, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+  }
+  padding: 1em;
+  background-color: $backgroung-main;
+}
+.wl-dialog-desc {
+  padding-bottom: 1em;
+}
+.wl-buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 2em;
+}
+.wl-dl-btn-close {
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
+  }
+  display: none;
+}
 </style>
