@@ -192,9 +192,9 @@ export default {
   color: #1D1D1D !important;
 }
 .dl-card {
-  background-color: $backgroung-main;
+  background-color: $backgroung-main !important;
 }
 .dl-card > .v-card__text {
-  padding: 0;
+  padding: 0 !important;
 }
 </style>
