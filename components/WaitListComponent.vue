@@ -1,72 +1,65 @@
 <template>
-  <div class="waitlist-wrapper">
-    <ButtonComponent
-      caption="Wait List"
-      class="wl-btn"
-    />
-
-    <v-dialog
-      v-model="dialog"
-      max-width="37.5em"
-      activator=".waitlist-wrapper > .wl-btn"
-      :fullscreen="$vuetify.breakpoint.xsOnly"
-      :hide-overlay="$vuetify.breakpoint.xsOnly"
-    >
-      <div class="wl-dialod">
-        <h2>
-          The finalbiome is near
-        </h2>
-        <div class="wl-dialog-desc">
-          Do not miss the chance to get great opportunities as the first
-        </div>
-        <div class="waitlist-form">
-          <ValidationObserver
-            ref="observer"
-            v-slot="{ invalid }"
-            mode="eager"
-          >
-            <form
-              ref="form"
-              action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
-              method="POST"
-              @submit.prevent="submit"
-            >
-              <ValidationProvider
-                v-slot="{ errors }"
-                name="email"
-                rules="required|email"
-              >
-                <v-text-field
-                  v-model="email"
-                  :error-messages="errors"
-                  label="E-mail"
-                  required
-                  name="entry.973815278"
-                />
-              </ValidationProvider>
-              <v-select
-                v-model="selectRole"
-                :items="itemsRole"
-                label="Who you are?"
-                name="entry.198554027"
-              />
-              <div class="wl-buttons-wrapper">
-                <v-btn
-                  type="submit"
-                  :disabled="invalid"
-                >
-                  submit
-                </v-btn>
-                <v-btn class="wl-dl-btn-close" @click="close">
-                  close
-                </v-btn>
-              </div>
-            </form>
-          </ValidationObserver>
-        </div>
+  <v-dialog
+    v-model="show"
+    max-width="37.5em"
+    :fullscreen="$vuetify.breakpoint.xsOnly"
+    :hide-overlay="$vuetify.breakpoint.xsOnly"
+  >
+    <div class="wl-dialod">
+      <h2>
+        The <span class="green-gradient-text">finalbiome</span> is near
+      </h2>
+      <div class="wl-dialog-desc">
+        Do not miss the chance to get great opportunities as the first!
       </div>
-    </v-dialog>
-  </div>
+      <div class="waitlist-form">
+        <ValidationObserver
+          ref="observer"
+          v-slot="{ invalid }"
+          mode="eager"
+        >
+          <form
+            ref="form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
+            method="POST"
+            @submit.prevent="submit"
+          >
+            <ValidationProvider
+              v-slot="{ errors }"
+              name="email"
+              rules="required|email"
+            >
+              <v-text-field
+                v-model="email"
+                :error-messages="errors"
+                label="E-mail"
+                required
+                name="entry.973815278"
+              />
+            </ValidationProvider>
+            <v-select
+              v-model="selectRole"
+              :items="itemsRole"
+              label="Who you are?"
+              name="entry.198554027"
+            />
+            <div class="wl-buttons-wrapper">
+              <v-btn
+                type="submit"
+                :disabled="invalid"
+                class="btn-wp"
+              >
+                Submit
+              </v-btn>
+              <v-btn class="wl-dl-btn-close btn-wp" @click="close">
+                Close
+              </v-btn>
+            </div>
+          </form>
+        </ValidationObserver>
+      </div>
+    </div>
+  </v-dialog>
 </template>
 
 <script>
@@ -86,6 +79,7 @@ extend('email', {
 export default {
   name: 'WaitListComponent',
   components: { ValidationProvider, ValidationObserver },
+  props: ['value'],
   data: () => ({
     email: '',
     selectRole: '',
@@ -93,9 +87,18 @@ export default {
       'Gamer',
       'Developer',
       'Both'
-    ],
-    dialog: false
+    ]
   }),
+  computed: {
+    show: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
+  },
   methods: {
     submit () {
       this.$refs.observer.validate()
@@ -134,7 +137,7 @@ export default {
             })
           }
         })
-      this.dialog = false
+      this.show = false
     },
     clear () {
       this.email = ''
@@ -142,7 +145,8 @@ export default {
       this.$refs.observer.reset()
     },
     close () {
-      this.dialog = false
+      this.show = false
+      this.clear()
     }
   }
 }
@@ -155,6 +159,7 @@ export default {
     @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
     @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
     @include fluid-type(padding-top, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+    padding-bottom: 2em;
   }
   padding: 1em;
   background-color: $backgroung-main;
@@ -163,10 +168,14 @@ export default {
   padding-bottom: 1em;
 }
 .wl-buttons-wrapper {
+  @media only screen and (max-width: 37.5em) {
+    padding-top: 1em;
+  }
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  column-gap: 2em;
+  gap: 2em;
 }
 .wl-dl-btn-close {
   @media only screen and (max-width: 37.5em) {

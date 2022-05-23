@@ -127,3 +127,34 @@ h5 {
 	line-height: $h5;
 	margin-top: calc((#{$baseline} - #{$h5}) + #{$baseline}*2);
 }
+
+.btn-wp {
+  text-transform: none !important;
+  color: #1D1D1D !important;
+  background: linear-gradient(92.05deg, #2DEA40 3.12%, #BFFF37 81.34%);
+  box-shadow: 0px 0.208333em 0.625em rgba(143, 255, 0, 0.2);
+
+  font-family: 'Museo';
+  font-style: normal;
+  font-weight: 650;
+  font-size: 1.5em; //24px;
+  line-height: 2.5em; //40px;
+  letter-spacing: normal;
+  text-indent: 0;
+  height: 2.916667em !important;
+  width: 10.416667em !important; // 250px
+  border-radius: 2.916667em;
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1.125em, 1.5em); // 18px - 24px
+
+}
+
+.btn-wp.v-btn--disabled {
+	color: $backgroung-main !important;
+}
+
+.green-gradient-text {
+	background: linear-gradient(92.05deg, #2DEA40 3.12%, #BFFF37 81.34%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

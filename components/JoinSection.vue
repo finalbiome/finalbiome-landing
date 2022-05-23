@@ -6,16 +6,28 @@
 
     <div class="join-buttons-wrap">
       <ButtonComponent caption="White Paper" link-url="/FinalBiomeWhitepaper.pdf" />
-      <ButtonComponent caption="Get White List" />
+      <v-btn
+        class="btn-wp"
+        large
+        rounded
+        @click.stop="dialog=true"
+      >
+        Join Now
+      </v-btn>
+      <WaitListComponent v-model="dialog" />
     </div>
   </div>
 </template>
 
 <script>
 import ButtonComponent from './ButtonComponent.vue'
+import WaitListComponent from './WaitListComponent.vue'
 export default {
   name: 'JoinSection',
-  components: { ButtonComponent }
+  components: { ButtonComponent, WaitListComponent },
+  data: () => ({
+    dialog: false
+  })
 }
 </script>
 

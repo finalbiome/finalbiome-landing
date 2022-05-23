@@ -32,7 +32,15 @@
             </div>
           </div>
         </a>
-        <ButtonComponent class="wp-btn" caption="Get White List" />
+        <v-btn
+          class="btn-wp wp-btn"
+          large
+          rounded
+          @click.stop="dialog=true"
+        >
+          Join Now
+        </v-btn>
+        <WaitListComponent v-model="dialog" />
       </div>
     </div>
     <div class="break" />
@@ -50,10 +58,13 @@
 
 <script>
 import SocialLinkComponent from './SocialLinkComponent.vue'
-import ButtonComponent from './ButtonComponent.vue'
+import WaitListComponent from './WaitListComponent.vue'
 export default {
   name: 'WhitepaperSection',
-  components: { SocialLinkComponent, ButtonComponent }
+  components: { SocialLinkComponent, WaitListComponent },
+  data: () => ({
+    dialog: false
+  })
 }
 </script>
 
