@@ -39,7 +39,7 @@
             The asset is created by a gamer: by efforts,
             actions and expenses of the gamer.
             Rules for game asset development are transparent
-            and invariable and its value does not change in time. Never.
+            and invariable and its value does not change in time. <span class="green-gradient-text">Never</span>
           </div>
         </div>
         <div class="bf-image-cont bf6">
