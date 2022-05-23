@@ -3,62 +3,67 @@
     v-model="show"
     max-width="37.5em"
     :fullscreen="$vuetify.breakpoint.xsOnly"
-    :hide-overlay="$vuetify.breakpoint.xsOnly"
+    overlay-color="#000"
+    overlay-opacity="0.7"
   >
-    <div class="wl-dialod">
-      <h2>
-        The <span class="green-gradient-text">finalbiome</span> is near
-      </h2>
-      <div class="wl-dialog-desc">
-        Do not miss the chance to get great opportunities as the first!
-      </div>
-      <div class="waitlist-form">
-        <ValidationObserver
-          ref="observer"
-          v-slot="{ invalid }"
-          mode="eager"
-        >
-          <form
-            ref="form"
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
-            method="POST"
-            @submit.prevent="submit"
-          >
-            <ValidationProvider
-              v-slot="{ errors }"
-              name="email"
-              rules="required|email"
+    <v-card class="dl-card">
+      <v-card-text>
+        <div class="wl-dialod">
+          <h2>
+            The <span class="green-gradient-text">finalbiome</span> is near
+          </h2>
+          <div class="wl-dialog-desc">
+            Do not miss the chance to get great opportunities as the first!
+          </div>
+          <div class="waitlist-form">
+            <ValidationObserver
+              ref="observer"
+              v-slot="{ invalid }"
+              mode="eager"
             >
-              <v-text-field
-                v-model="email"
-                :error-messages="errors"
-                label="E-mail"
-                required
-                name="entry.973815278"
-              />
-            </ValidationProvider>
-            <v-select
-              v-model="selectRole"
-              :items="itemsRole"
-              label="Who you are?"
-              name="entry.198554027"
-            />
-            <div class="wl-buttons-wrapper">
-              <v-btn
-                type="submit"
-                :disabled="invalid"
-                class="btn-wp"
+              <form
+                ref="form"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdI4rjJxIgGjaVUdjG2zETV-wmxgb8cNR0s2QEl1gQVZeEkog/formResponse"
+                method="POST"
+                @submit.prevent="submit"
               >
-                Submit
-              </v-btn>
-              <v-btn class="wl-dl-btn-close btn-wp" @click="close">
-                Close
-              </v-btn>
-            </div>
-          </form>
-        </ValidationObserver>
-      </div>
-    </div>
+                <ValidationProvider
+                  v-slot="{ errors }"
+                  name="email"
+                  rules="required|email"
+                >
+                  <v-text-field
+                    v-model="email"
+                    :error-messages="errors"
+                    label="E-mail"
+                    required
+                    name="entry.973815278"
+                  />
+                </ValidationProvider>
+                <v-select
+                  v-model="selectRole"
+                  :items="itemsRole"
+                  label="Who you are?"
+                  name="entry.198554027"
+                />
+                <div class="wl-buttons-wrapper">
+                  <v-btn
+                    type="submit"
+                    :disabled="invalid"
+                    class="btn-wp dl-btn"
+                  >
+                    Submit
+                  </v-btn>
+                  <v-btn class="wl-dl-btn-close btn-wp dl-btn" @click="close">
+                    Close
+                  </v-btn>
+                </div>
+              </form>
+            </ValidationObserver>
+          </div>
+        </div>
+      </v-card-text>
+    </v-card>
   </v-dialog>
 </template>
 
@@ -182,5 +187,14 @@ export default {
     display: flex;
   }
   display: none;
+}
+.dl-btn.theme--dark.v-btn.v-btn--has-bg {
+  color: #1D1D1D !important;
+}
+.dl-card {
+  background-color: $backgroung-main;
+}
+.dl-card > .v-card__text {
+  padding: 0;
 }
 </style>
