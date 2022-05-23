@@ -3,8 +3,8 @@
     <FeatureComponent
       :img-idx="1"
       title="Not a Token but an Asset"
-      text="All qualitative characteristics of assets are stored on-chain inside it,
-      including information about the resources spent on production"
+      text="All qualitative characteristics of assets are stored on-chain,
+      including information about the resources spent on their production"
     />
     <FeatureComponent
       :img-idx="4"
@@ -26,7 +26,7 @@
     />
     <FeatureComponent
       :img-idx="5"
-      title="Darkmarket No More"
+      title="No More Gray Market"
       text="Gamer can trade and exchange his/her character and assets officially
       on Finalbiome whole marketplace, that unites markets of all games on the platform"
     />
