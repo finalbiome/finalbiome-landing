@@ -196,5 +196,6 @@ export default {
 }
 .dl-card > .v-card__text {
   padding: 0 !important;
+  font-size: 1em !important;
 }
 </style>
