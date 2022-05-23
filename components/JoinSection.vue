@@ -5,7 +5,7 @@
     </div>
 
     <div class="join-buttons-wrap">
-      <ButtonComponent caption="White Paper" link-url="/FinalBiomeWhitepaper.pdf" />
+      <ButtonComponent caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" />
       <v-btn
         class="btn-wp"
         large

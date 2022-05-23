@@ -3,31 +3,32 @@
     <FeatureComponent
       :img-idx="1"
       title="Not a Token but an Asset"
-      text="Все качественные характеристики ассета хранятся внутри него,
-          включая информацию о затраченных на его производство ресурсах"
-    />
-    <FeatureComponent
-      :img-idx="2"
-      title="No technological threshold"
-      text="FinalBiome реализует возможности по no code имплементации игровой
-      логики, по правилам которой игроки смогут создавать и взаимодействовать
-      со своими игровыми ассетами"
-    />
-    <FeatureComponent
-      :img-idx="3"
-      title="Financial model and monetization"
-      text="FinalBiome возвращает классические способы монетизации игр и оценки финансовой модели"
+      text="All qualitative characteristics of assets are stored on-chain inside it,
+      including information about the resources spent on production"
     />
     <FeatureComponent
       :img-idx="4"
       title="No Costs for Gamers"
-      text="FinalBiome проектируется как fee-less блокчейн для игроков, что
-      снимает главный барьер – оплата каждого действия"
+      text="FinalBiome is designed as a fee-less blockchain for players,
+      which removes the main barrier – payment for each action"
+    />
+    <FeatureComponent
+      :img-idx="2"
+      title="No Technological Threshold"
+      text="FinalBiome  embodies the possibility of no code implementation of game logic,
+      according to the rules of which players will be able to create and interact with their game assets"
+    />
+    <FeatureComponent
+      :img-idx="3"
+      title="Financial Model and Monetization"
+      text="FinalBiome brings back the classic ways (methods)
+      to monetize games and evaluate the financial model"
     />
     <FeatureComponent
       :img-idx="5"
-      title="Clean User Experience"
-      text="FinalBiome ставит своей задачей обеспечить онбординг в игру не сложнее, чем вход в обычную игру"
+      title="Darkmarket No More"
+      text="Gamer can trade and exchange his/her character and assets officially
+      on Finalbiome whole marketplace, that unites markets of all games on the platform"
     />
   </div>
 </template>

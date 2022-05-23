@@ -9,18 +9,10 @@
           <div class="big-feature-content">
             FinalBiome gives game developers the ability to easily,
             with no specific knowledge and backend build decentralized, web3 games.
-            And for gamers the confidence that the rules of the game will not change.
-            <span class="f-accent">Never.</span>
+            And for gamers makes onboarding a game as easy as logging into a conventional game.
           </div>
           <div>
-            <!-- <v-btn
-              class="btn-wp"
-              large
-              rounded
-            >
-              White Paper
-            </v-btn> -->
-            <ButtonComponent class="sbtn" caption="White Paper" link-url="/FinalBiomeWhitepaper.pdf" />
+            <ButtonComponent class="sbtn" caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" />
           </div>
         </div>
         <div class="bf-image-cont bf2">
@@ -32,19 +24,22 @@
           <img class="bf-image" src="~/assets/images/bf2.png">
         </div>
         <div class="big-feature bf4">
-          <h2>Mass adoption without the mass</h2>
+          <h2>True Blockchain Paradigm</h2>
           <div class="big-feature-content">
-            FinalBiome делает возможным создавать игры со всеми преимуществами
-            блокчейна и без компромиссов. Game metaverses as entertainment.
+            Game platform with on-chain game logic – It transfers
+            the whole game logic into blockchain.
+            Blockchain stores not only assets, but the logic of their creation too.
           </div>
         </div>
       </div>
       <div class="bf-wrapper-3 d-flex flex-wrap">
         <div class="big-feature bf5">
-          <h2>Breaking Down Barriers</h2>
+          <h2>Rules Never Change</h2>
           <div class="big-feature-content">
-            FinalBiome ставит целью устранить все барьеры, препятствующие
-            масштабной экспансии видеоигр на web3 технологии.
+            The asset is created by a gamer: by efforts,
+            actions and expenses of the gamer.
+            Rules for game asset development are transparent
+            and invariable and its value does not change in time. Never.
           </div>
         </div>
         <div class="bf-image-cont bf6">
@@ -95,9 +90,7 @@ export default {
   max-width: 35em;
 
 }
-.f-accent {
-  color: #fff;
-}
+
 .bf-wrapper-2, .bf-wrapper-3 {
   align-items: center;
 }
