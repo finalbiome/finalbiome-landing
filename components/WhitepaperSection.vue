@@ -7,13 +7,13 @@
     </div>
     <div class="wp-inner-wrapper">
       <div class="wp-about">
-        <h2>About the platform</h2>
+        <h2>About the Platform</h2>
         <ul>
-          <li>Понятные и прозрачные правила генерации ассетов</li>
-          <li>Ценность ассета определяется  трудозатратами игрока</li>
-          <li>Неизменные правила экономики игры</li>
-          <li>Отсутсвием возможности манипулирования ценностью игровых ассетов</li>
-          <li>Нет административных полномочий, в том числе у платформы, что исключает возникновение скама</li>
+          <li>Clear and transparent rules for generating assets</li>
+          <li>The value of an asset is determined by the labor costs of the player</li>
+          <li>The unchanging rules of the economy of the game</li>
+          <li>Absence of the ability to manipulate the value of game assets</li>
+          <li>There are no administrative authority, including the platform, which eliminates the occurrence of scam</li>
         </ul>
       </div>
       <div class="wp-download-wrapper">
