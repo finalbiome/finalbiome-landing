@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="bf-image-cont bf2">
-          <img class="bf-image" src="~/assets/images/bf1-1.png">
+          <img class="bf-image" src="~/assets/images/bf1.png">
         </div>
       </div>
       <div class="bf-wrapper-2 d-flex flex-wrap">
