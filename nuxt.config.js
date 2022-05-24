@@ -32,6 +32,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Noto+Sans:300,400,700,400italic,700italic&subset=latin,latin-ext'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
       }
     ],
     script: [
