@@ -19,8 +19,8 @@ export default {
       { hid: 'og-type', property: 'og:type', content: 'website' },
       { hid: 'og-title', property: 'og:title', content: 'finalbiome' },
       { hid: 'og-desc', property: 'og:description', content: 'Decentralized game deployment platform' },
-      { hid: 'og-image', property: 'og:image', content: 'https://finalbiome-landing.web.app/finalbiome-preview1200x630.jpg' },
-      { hid: 'og-url', property: 'og:url', content: 'https://finalbiome-landing.web.app/' },
+      { hid: 'og-image', property: 'og:image', content: 'https://finalbiome.net/finalbiome-preview1200x630.jpg' },
+      { hid: 'og-url', property: 'og:url', content: 'https://finalbiome.net/' },
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
