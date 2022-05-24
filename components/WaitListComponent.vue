@@ -91,7 +91,7 @@ export default {
     itemsRole: [
       'Gamer',
       'Developer',
-      'Both'
+      'Investor'
     ]
   }),
   computed: {
