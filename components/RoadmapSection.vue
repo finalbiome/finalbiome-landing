@@ -121,10 +121,9 @@ export default {
   // align-items: center;
   row-gap: 1em;
   @include fluid-type(font-size, $minScreen, $maxScreen, 0.6rem, 1rem);
-  background-image: url('~/assets/images/grass.png');
+  background-image: url('~/assets/images/grass.jpg');
   background-repeat: repeat-x;
   background-clip: border-box;
-  background-blend-mode: multiply;
   background-size: 1920px 332px;//3840px 664px;
   background-position: bottom;
 }
