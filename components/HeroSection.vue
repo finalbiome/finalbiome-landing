@@ -86,7 +86,7 @@ export default {
   width: 18em;
 }
 .hero-outer-wrapper {
-  background-image: url("~assets/images/hero-bg.png");
+  background-image: url("~assets/images/hero-bg.jpg");
   background-position: bottom;
   background-size: contain;
   background-size: 1500px;
