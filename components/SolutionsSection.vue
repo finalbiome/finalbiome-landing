@@ -11,7 +11,8 @@
             with no specific knowledge and backend build decentralized, web3 games.
             And for gamers makes onboarding a game is as easy as logging into a conventional game.
           </div>
-          <div>
+          <div class="solution-buttons">
+            <ButtonComponent class="sbtn" caption="Lightpaper" link-url="/FinalBiomeLightpaper.pdf" />
             <ButtonComponent class="sbtn" caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" />
           </div>
         </div>
@@ -142,9 +143,17 @@ export default {
   margin-top: -10em;
 }
 
-.sbtn {
+.solution-buttons {
+  @media only screen and (max-width: 65em) {
+    margin-right: 0;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5em;
   margin-top: 3em;
   margin-bottom: 2em;
+  margin-right: 2em;
 }
 
 </style>
