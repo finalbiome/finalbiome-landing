@@ -17,21 +17,38 @@
         </ul>
       </div>
       <div class="wp-download-wrapper">
-        <a href="/FinalBiomeWhitepaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Whitepaper">
-          <div class="wp-dl-rect-wrap">
-            <div class="wp-dl-rect">
-              <div class="wp-dl-img">
-                <img src="~/assets/images/paper.svg">
-              </div>
-              <div class="wp-dl-header">
-                Whitepaper
-              </div>
-              <div class="wp-dl-desc">
-                View PDF
+        <div class="downloads-btn-wrapper">
+          <a href="/FinalBiomeLightpaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Lightpaper">
+            <div class="wp-dl-rect-wrap">
+              <div class="wp-dl-rect">
+                <div class="wp-dl-img">
+                  <img src="~/assets/images/paper.svg">
+                </div>
+                <div class="wp-dl-header wp-dl-header1">
+                  Lightpaper
+                </div>
+                <div class="wp-dl-desc">
+                  View PDF
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+          <a href="/FinalBiomeWhitepaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Whitepaper">
+            <div class="wp-dl-rect-wrap">
+              <div class="wp-dl-rect">
+                <div class="wp-dl-img">
+                  <img src="~/assets/images/papers.svg">
+                </div>
+                <div class="wp-dl-header wp-dl-header2">
+                  Whitepaper
+                </div>
+                <div class="wp-dl-desc">
+                  View PDF
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
         <v-btn
           class="btn-wp wp-btn"
           large
@@ -72,10 +89,10 @@ export default {
 @import '~/assets/globals.scss';
 
 $background-color: #0B0B0B;
-$breakpoint-to-column: 800px;
+$breakpoint-to-column: 73.125em; //1170px
 .whitepaper-wrapper {
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875em, 15.625em); // 250 - 30
-  @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875em, 15.625em); // 250 - 30
+  @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875em, 8.125em); // 130 - 30
 
   // @include fluid-type(font-size, $minScreen, $maxScreen, 1rem, 1.125rem); // 16px - 18px
   background-color: $background-color;
@@ -90,6 +107,7 @@ $breakpoint-to-column: 800px;
     text-align: left;
   }
   text-align: right;
+  padding-right: 7.5em;
 }
 .wp-header1 > h1 {
   position: relative;
@@ -104,7 +122,7 @@ $breakpoint-to-column: 800px;
   @include fluid-type(font-size, $minScreen, $maxScreen, 1rem, 1.125rem); // 16px - 18px
   flex-basis: 20em;
   flex-grow: 2;
-  padding-right: 1em;
+  // padding-right: 1em;
   padding-bottom: 2em;
 }
 
@@ -125,11 +143,13 @@ ul li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include fluid-type(column-gap, $minScreen, $maxScreen, 2em, 4em);
 
 }
 .wp-download-wrapper {
   @media only screen and (max-width: $breakpoint-to-column) {
     margin-top: 2em;
+    width: 100%;
   }
   display: flex;
   flex-direction: column;
@@ -161,18 +181,25 @@ ul li {
   @include fluid-type(margin-top, $minScreen, $maxScreen, 1.25rem, 2.5rem);
 }
 .wp-dl-img > img {
-  height: 3.125em;
+  height: 4.375em;
 }
 
 .wp-dl-header {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    margin: 0 2em;
+  }
   font-family: 'Museo';
   font-style: normal;
   font-weight: 650;
-  // font-size: 2.5em;
   line-height: 1.2;
   @include fluid-type(font-size, $minScreen, $maxScreen, 1.25rem, 2.5rem); // 20px - 40px
-  margin: 0 2.2em;
-
+  margin: 0 1em;
+}
+.wp-dl-header1 {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    margin: 0 2.2em;
+  }
+  margin: 0 1.2em;
 }
 
 .wp-dl-desc {
@@ -210,9 +237,18 @@ ul li {
   flex-basis: 100%;
   height: 0;
 }
-.wp-download-wrapper > a {
+.downloads-btn-wrapper > a {
   color: #fff !important;
   text-decoration: none !important;
+}
+.downloads-btn-wrapper {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    justify-content: center;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  @include fluid-type(column-gap, $minScreen, $maxScreen, 2em, 4em);
+  row-gap: 2em;
 }
 
 </style>
