@@ -17,12 +17,12 @@
           </div>
         </div>
         <div class="bf-image-cont bf2">
-          <img class="bf-image" src="~/assets/images/bf1.png">
+          <img class="bf-image" src="~/assets/images/bf1.png" alt="Solution">
         </div>
       </div>
       <div class="bf-wrapper-2 d-flex flex-wrap">
         <div class="bf-image-cont bf3">
-          <img class="bf-image" src="~/assets/images/bf2.png">
+          <img class="bf-image" src="~/assets/images/bf2.png" alt="True Blockchain Paradigm">
         </div>
         <div class="big-feature bf4">
           <h2>True Blockchain Paradigm</h2>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="bf-image-cont bf6">
-          <img class="bf-image" src="~/assets/images/bf3.png">
+          <img class="bf-image" src="~/assets/images/bf3.png" alt="Rules Never Change">
         </div>
       </div>
     </div>

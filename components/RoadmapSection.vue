@@ -8,9 +8,9 @@
     <div class="roadmap-outer-wrapper">
       <div class="trees-wrapper">
         <div class="tree-stub" />
-        <img id="tree-1" class="tree-img" src="~/assets/images/tree-1.png">
-        <img id="tree-2" class="tree-img" src="~/assets/images/tree-2.png">
-        <img id="tree-3" class="tree-img" src="~/assets/images/tree-3.png">
+        <img id="tree-1" class="tree-img" src="~/assets/images/tree-1.png" alt="small tree">
+        <img id="tree-2" class="tree-img" src="~/assets/images/tree-2.png" alt="middle tree">
+        <img id="tree-3" class="tree-img" src="~/assets/images/tree-3.png" alt="big tree">
       </div>
       <div class="roadmap-line-wrapper">
         <div class="rm-phase-first-line" />

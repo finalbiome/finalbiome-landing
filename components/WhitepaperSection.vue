@@ -22,7 +22,7 @@
             <div class="wp-dl-rect-wrap">
               <div class="wp-dl-rect">
                 <div class="wp-dl-img">
-                  <img src="~/assets/images/paper.svg">
+                  <img src="~/assets/images/paper.svg" alt="paper">
                 </div>
                 <div class="wp-dl-header wp-dl-header1">
                   Lightpaper
@@ -37,7 +37,7 @@
             <div class="wp-dl-rect-wrap">
               <div class="wp-dl-rect">
                 <div class="wp-dl-img">
-                  <img src="~/assets/images/papers.svg">
+                  <img src="~/assets/images/papers.svg" alt="papers">
                 </div>
                 <div class="wp-dl-header wp-dl-header2">
                   Whitepaper

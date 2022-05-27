@@ -2,7 +2,7 @@
   <div id="menu" class="menu-wrapper">
     <div class="m-logo">
       <a href="/">
-        <img src="~/assets/images/finalbiome.svg">
+        <img src="~/assets/images/finalbiome.svg" alt="finalbiome logo">
       </a>
     </div>
     <nav v-click-outside="onClickOutside">

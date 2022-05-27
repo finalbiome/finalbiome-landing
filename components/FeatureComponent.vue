@@ -2,7 +2,7 @@
   <div class="feature-wrapper">
     <div class="circle-img">
       <!-- <img src="~/assets/images/f1.svg"> -->
-      <img :src="require(`~/assets/images/f${imgIdx}.svg`)">
+      <img :src="require(`~/assets/images/f${imgIdx}.svg`)" :alt="title">
     </div>
     <div class="content-wrapper">
       <div class="header">
