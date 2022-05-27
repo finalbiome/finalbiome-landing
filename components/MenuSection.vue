@@ -5,7 +5,7 @@
         <img src="~/assets/images/finalbiome.svg">
       </a>
     </div>
-    <nav v-click-outside="onClickOutside" role="menu">
+    <nav v-click-outside="onClickOutside">
       <input id="button" type="checkbox" @input="clickMenu">
       <label for="button" onclick />
       <ul>
@@ -113,7 +113,7 @@ label {
 }
 
 /* menu */
-nav[role="menu"] {
+nav {
   position:relative;
   width: 100%;
 
@@ -156,7 +156,7 @@ nav[role="menu"] {
 
 /* small screens */
 @media screen and (max-width: 58.75em) {
-  nav[role="menu"] {
+  nav {
     ul {
       display:none;
       height:100%;
