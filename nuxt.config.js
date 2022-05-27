@@ -26,10 +26,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Noto+Sans:300,400,700,400italic,700italic&subset=latin,latin-ext'
-      }
+      { rel: 'preload', as: 'style', onload: "this.onload=null;this.rel='stylesheet'", href: 'https://fonts.googleapis.com/css?family=Noto+Sans:300,400,700,400italic,700italic&subset=latin,latin-ext' }
     ],
     script: [
       {
@@ -68,6 +65,7 @@ export default {
   vuetify: {
     // https://github.com/nuxt-community/vuetify-module#defaultassets
     defaultAssets: false,
+    treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     optionsPath: '~/vuetify.options.js'
   },
