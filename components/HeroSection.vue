@@ -6,7 +6,7 @@
         finalbiome
       </div>
       <div class="header-second">
-        First decentralized game deployment platform
+        Decentralized game deployment platform
       </div>
       <div class="header-third">
         Deploying a game on the blockchain has never been so easy
