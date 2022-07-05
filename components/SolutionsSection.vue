@@ -9,7 +9,7 @@
           <div class="big-feature-content">
             FinalBiome gives game developers the ability to easily,
             with no specific knowledge and backend build decentralized, web3 games.
-            And for gamers makes onboarding a game is as easy as logging into a conventional game.
+            And for gamers makes onboarding a game as easy as logging into a conventional game.
           </div>
           <div class="solution-buttons">
             <ButtonComponent class="sbtn" caption="Lightpaper" link-url="/FinalBiomeLightpaper.pdf" />
