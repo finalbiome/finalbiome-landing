@@ -22,6 +22,7 @@ export default {
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
+      { rel: 'canonical', href: 'https://finalbiome.net/' },
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
