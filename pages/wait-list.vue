@@ -22,7 +22,6 @@ export default {
   methods: {
     show () {
       this.showScheduleForm = true
-      console.log('ssss')
     }
   }
 }

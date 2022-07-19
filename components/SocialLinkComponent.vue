@@ -9,6 +9,7 @@
 <script>
 export default {
   name: 'SocialLinkComponent',
+  // eslint-disable-next-line vue/require-prop-types
   props: ['network', 'linkUrl'],
   data () {
     return {

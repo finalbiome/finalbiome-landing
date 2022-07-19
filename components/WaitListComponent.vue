@@ -84,6 +84,7 @@ extend('email', {
 export default {
   name: 'WaitListComponent',
   components: { ValidationProvider, ValidationObserver },
+  // eslint-disable-next-line vue/require-prop-types
   props: ['value'],
   data: () => ({
     email: '',
@@ -133,6 +134,7 @@ export default {
           }
         })
         .catch((e) => {
+          // eslint-disable-next-line no-console
           console.error(e)
           // send error to GA
           if (gtag) {

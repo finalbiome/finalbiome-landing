@@ -20,6 +20,7 @@
 <script>
 export default {
   name: 'FeatureComponent',
+  // eslint-disable-next-line vue/require-prop-types
   props: ['imgIdx', 'title', 'text']
 }
 </script>

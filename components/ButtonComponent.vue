@@ -17,6 +17,7 @@
 <script>
 export default {
   name: 'ButtonComponent',
+  // eslint-disable-next-line vue/require-prop-types
   props: ['caption', 'linkUrl'],
   methods: {
     btnClick (event) {
