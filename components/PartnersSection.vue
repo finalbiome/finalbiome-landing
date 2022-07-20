@@ -68,18 +68,18 @@ $breakpoint-to-column: 50em; //800px
   column-gap: 1.6em;
   row-gap: 1em;
     padding-bottom: 2em;
-  
+
     }
-  
+
     .p-partner-logo {
       max-width: 20vw;
       display: flex;
-  
+
       img {
         max-width: 100%;
       }
     }
-  
+
     h1 {
       // @media only screen and (max-width: $breakpoint-to-column) {
       //   text-align: center;
