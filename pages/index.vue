@@ -3,6 +3,7 @@
     <HeroSection />
     <SolutionsSection />
     <FeaturesSection />
+    <ProductSection />
     <PartnersSection />
     <JoinSection />
     <RoadmapSection />
@@ -18,6 +19,7 @@ import PartnersSection from '~/components/PartnersSection.vue'
 import JoinSection from '~/components/JoinSection.vue'
 import RoadmapSection from '~/components/RoadmapSection.vue'
 import WhitepaperSection from '~/components/WhitepaperSection.vue'
+import ProductSection from '~/components/ProductSection.vue'
 
 export default {
   name: 'IndexPage',
@@ -28,7 +30,8 @@ export default {
     JoinSection,
     RoadmapSection,
     WhitepaperSection,
-    PartnersSection
+    PartnersSection,
+    ProductSection
   }
 }
 </script>

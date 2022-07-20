@@ -46,7 +46,13 @@ $breakpoint-to-column: 50em; //800px
   background-image: url("~assets/images/bg-partners.jpg");
   background-position: bottom;
   background-size: contain;
-  background-size: 100vw;
+  // background-size: 100vw;
+  @include fluid-type(background-size, $minScreen, $maxScreen, 200vw, 100vw); // 130 - 30
+
+    padding-top: 22em;
+    // margin-top: -5em;
+    // @include fluid-type(padding-top, $minScreen, $maxScreen, 22em, 22em); // 130 - 30
+    @include fluid-type(margin-top, $minScreen, $maxScreen, -20em, -5em); // 130 - 30
 }
 
 .p-parnters {
@@ -83,18 +89,6 @@ h1 {
 
 .p-gamedevdao-logo {
   height: 1.2em;
-}
-
-.p-justforward-logo {
-  // height: .6em;
-}
-
-.p-armadillo-logo {
-  // height: .8em;
-}
-
-.p-gd-talents-logo {
-  // height: .8em;
 }
 
 a {
