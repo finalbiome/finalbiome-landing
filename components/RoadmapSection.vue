@@ -259,8 +259,9 @@ export default {
 
 h1 {
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem);
-  position: relative;
-  top: -0.5em;
+  // position: relative;
+  // top: -0.5em;
+  padding-top: 1em;
 }
 
 .bottom-faider {

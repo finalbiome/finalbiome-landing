@@ -3,9 +3,9 @@
     <HeroSection />
     <SolutionsSection />
     <FeaturesSection />
+    <JoinSection />
     <ProductSection />
     <PartnersSection />
-    <JoinSection />
     <RoadmapSection />
     <WhitepaperSection />
   </div>

@@ -42,7 +42,6 @@ $breakpoint-to-column: 50em; //800px
   background-color: #1d1d1d;
   justify-content: center;
   padding-top: 8em;
-  padding-bottom: 8em;
   background-image: url("~assets/images/bg-partners.jpg");
   background-position: bottom;
   background-size: contain;
@@ -68,21 +67,23 @@ $breakpoint-to-column: 50em; //800px
   flex: auto;
   column-gap: 1.6em;
   row-gap: 1em;
-}
-
-.p-partner-logo {
-  max-width: 20vw;
-  display: flex;
-
-  img {
-    max-width: 100%;
-  }
-}
-
-h1 {
-  @media only screen and (max-width: $breakpoint-to-column) {
-    text-align: center;
-  }
+    padding-bottom: 2em;
+  
+    }
+  
+    .p-partner-logo {
+      max-width: 20vw;
+      display: flex;
+  
+      img {
+        max-width: 100%;
+      }
+    }
+  
+    h1 {
+      // @media only screen and (max-width: $breakpoint-to-column) {
+      //   text-align: center;
+      // }
 
   padding-bottom: .6em;
 }
