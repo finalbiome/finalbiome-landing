@@ -1,17 +1,12 @@
 <template>
   <div class="join-wrapper">
-    <div>
+    <!-- <div>
       <h1>Join Us</h1>
-    </div>
+    </div> -->
 
     <div class="join-buttons-wrap">
       <ButtonComponent caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" />
-      <v-btn
-        class="btn-wp"
-        large
-        rounded
-        @click.stop="dialog=true"
-      >
+      <v-btn class="btn-wp" large rounded @click.stop="dialog=true">
         Join Now
       </v-btn>
       <WaitListComponent v-model="dialog" />
@@ -43,7 +38,7 @@ export default {
   flex-direction: column;
   align-items: center;
   row-gap: 1em;
-  padding-bottom: 10em;
+  padding-bottom: 2em;
 }
 .join-buttons-wrap {
   display: flex;
