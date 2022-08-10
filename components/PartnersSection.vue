@@ -17,13 +17,18 @@
         </a>
       </div>
       <div class="p-partner-logo">
-        <a href="https://armadillogames.tilda.ws/" target="_blank" rel="noopener noreferrer" title="Armadillo Games">
+        <a href="https://armadillo.fun/" target="_blank" rel="noopener noreferrer" title="Armadillo Games">
           <img class="p-armadillo-logo" src="~/assets/images/armadillo-games.svg" alt="Armadillo Games logo">
         </a>
       </div>
       <div class="p-partner-logo">
         <a href="https://www.gdtalents.com/" target="_blank" rel="noopener noreferrer" title="GD-Tallents">
           <img class="p-gd-talents-logo" src="~/assets/images/gd-talents.svg" alt="GD-Tallents logo">
+        </a>
+      </div>
+      <div class="p-partner-logo">
+        <a href="https://empera.network/" target="_blank" rel="noopener noreferrer" title="Empera">
+          <img class="p-empera-logo" src="~/assets/images/empera.svg" alt="Empera logo">
         </a>
       </div>
     </div>
@@ -90,6 +95,9 @@ $breakpoint-to-column: 50em; //800px
 
 .p-gamedevdao-logo {
   height: 1.2em;
+}
+.p-empera-logo {
+  height: 0.6em;
 }
 
 a {
