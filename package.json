@@ -14,7 +14,7 @@
     "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
-    "core-js": "^3.19.3",
+    "core-js": "^3.27.0",
     "nuxt": "^2.15.8",
     "vee-validate": "3",
     "vue": "^2.6.14",
