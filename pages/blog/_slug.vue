@@ -72,14 +72,14 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/globals.scss';
 
-#menu {
-  position: relative;
-}
+$breakpoint-to-column: 50rem; //800px
 
 article {
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
   @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
   @include fluid-type(font-size, $minScreen, $maxScreen, 1rem, 1.25rem); // 20px - 16px
+
+  padding-top: 8em;
 }
 
 #blog-article-title {
@@ -98,6 +98,11 @@ article {
 }
 
 .article-hero-image {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    position: relative;
+    width: 100vw;
+    @include fluid-type(left, $minScreen, $maxScreen, -1.875rem, -15.625rem); // 50 - 30
+  }
   border-radius: 1.25em 1.25em 0px 0px;
   filter: drop-shadow(0px 0.625em 1.25em rgba(0, 0, 0, 0.1));
   width: 100%;
@@ -105,11 +110,18 @@ article {
 }
 
 .article-summary {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    position: relative;
+    width: 100vw;
+    @include fluid-type(left, $minScreen, $maxScreen, -1.875rem, -15.625rem); // 50 - 30
+  }
+
   background-color: $article-dark;
   padding: 3.125rem;
   border-radius: 0px 0px 1.25em 1.25em;
   filter: drop-shadow(0px 0.625em 1.25em rgba(0, 0, 0, 0.1));
-  font-size: 1.25em;
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1rem, 1.5625rem); // 16 - 25
+  @include fluid-type(padding, $minScreen, $maxScreen, 1.875rem, 3.125rem); // 50 - 30
 }
 
 ::v-deep(.nuxt-content h2) {
