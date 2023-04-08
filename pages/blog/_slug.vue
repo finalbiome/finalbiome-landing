@@ -79,6 +79,7 @@ export default {
 article {
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
   @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1rem, 1.25rem); // 20px - 16px
 }
 
 #blog-article-title {
@@ -88,10 +89,10 @@ article {
 .article-meta {
   display: flex;
   column-gap: 2.5em;
-  font-size: 0.9375em;
+  font-size: 0.9375rem; // 15 px
 
   p {
-    margin-bottom: 2.5em;
+    @include fluid-type(margin-bottom, $minScreen, $maxScreen, 1.875rem, 3.125rem); // 50 - 30
     color: $article-gray;
   }
 }
@@ -108,11 +109,11 @@ article {
   padding: 3.125rem;
   border-radius: 0px 0px 1.25em 1.25em;
   filter: drop-shadow(0px 0.625em 1.25em rgba(0, 0, 0, 0.1));
-  font-size: 1.5625em;
+  font-size: 1.25em;
 }
 
 ::v-deep(.nuxt-content h2) {
-  @include fluid-type(font-size, $minScreen, $maxScreen, 1.125em, 2.5em); // 18 - 40
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1.25rem, 2.5rem); // 20 - 40
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
@@ -121,29 +122,21 @@ article {
   margin-top: 3em;
 }
 
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-//#app > div > main > div > div > article > div > div.nuxt-content-container > div > p:nth-child(2)
-
 ::v-deep(.nuxt-content p) {
-  font-size: 1.25em;
   line-height: 2em;
   margin-bottom: 2em;
 }
 
 ::v-deep(.nuxt-content ol) {
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 2em;
   padding-left: 2.5em;
 }
 
 .article-bottom-line {
   border: 1px solid $article-bottom-line;
-  margin-top: 3.75em;
-  margin-bottom: 1.875em;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
 }
 
 .icon.icon-link {
