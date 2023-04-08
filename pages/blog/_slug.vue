@@ -22,6 +22,7 @@
         <blog-prev-next :prev="prev" :next="next" />
       </div>
     </article>
+    <WhitepaperSection />
   </div>
 </template>
 
@@ -73,6 +74,21 @@ export default {
 @import '~/assets/globals.scss';
 
 $breakpoint-to-column: 50rem; //800px
+
+::v-deep(#whitepaper) {
+  position: static;
+  // padding-top: 1em;
+}
+
+#whitepaper-section {
+  background-image: url('~/assets/images/grass.jpg');
+  background-repeat: repeat-x;
+  background-clip: border-box;
+  background-size: 1920px 332px;//3840px 664px;
+  // background-position: top;
+  background-position: 100% 0%;
+  padding-top: 16em;
+}
 
 article {
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30

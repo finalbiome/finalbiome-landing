@@ -67,7 +67,7 @@ $breakpoint-to-column: 50rem; //800px
 $breakpoint-to-shrink-lines: 87.5rem; //1400px
 
 .blog-navigator-wrapper {
-  @include fluid-type(margin-bottom, $minScreen, $maxScreen, 3.75rem, 8.75rem); // 140 - 60
+  // @include fluid-type(margin-bottom, $minScreen, $maxScreen, 3.75rem, 8.75rem); // 140 - 60
   @include fluid-type(margin-top, $minScreen, $maxScreen, 3.75rem, 4.375rem); // 70 - 60
   font-size: 0.9375rem; // 15px
 }
