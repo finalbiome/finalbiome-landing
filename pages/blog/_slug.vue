@@ -2,6 +2,7 @@
   <div>
     <MenuSection />
     <article>
+      <BlogBackComponent class="blog-back" link-url="/blog" />
       <div>
         <h1 id="blog-article-title">
           {{ article.title }}
@@ -95,11 +96,12 @@ article {
   @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
   @include fluid-type(font-size, $minScreen, $maxScreen, 1rem, 1.25rem); // 20px - 16px
 
-  padding-top: 8em;
+  padding-top: 10rem;
 }
 
 #blog-article-title {
   @extend h2;
+  padding-top: .4em;
 }
 
 .article-meta {

@@ -2,6 +2,7 @@
 <template>
   <div class="blog-articles-wrapper">
     <MenuSection />
+    <BlogBackComponent class="max-width-limit blog-back" link-url="/" />
     <h1 class="blog-articles-header max-width-limit">
       Blog
     </h1>
@@ -130,7 +131,7 @@ export default {
 $breakpoint-to-column: 50rem; //800px
 $breakpoint-to-tablet: 75rem; //1200px
 #menu {
-  z-index: 2;
+  z-index: 3;
 }
 
 ul {
@@ -164,8 +165,14 @@ h3 {
   padding-right: calc((100vw - #{$maxScreen}) / 2 + 15.625rem);
 }
 
+.blog-back {
+  padding-top: 10rem;
+  position: relative;
+  z-index: 2;
+}
+
 .blog-articles-header {
-  padding-top: 8rem;
+  padding-top: .08em;
   margin-bottom: 0;
   line-height: 115%;
 
