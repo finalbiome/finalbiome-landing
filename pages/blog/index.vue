@@ -4,27 +4,29 @@
     <h1 class="blog-articles-header">
       Blog
     </h1>
-    <div class="blog-articles-list-featured">
-      <div class="blog-articles-list-featured-text-wrapper">
-        <h2 class="blog-articles-list-featured-title">
-          {{ featured.title }}
-        </h2>
-      </div>
-      <div class="blog-articles-list-featured-image-wrapper">
-        <div class="blog-articles-list-featured-image-wrapper-inner">
-          <img class="blog-articles-list-featured-image" :src="featured.img" :alt="featured.alt">
+    <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: featured.slug } }">
+      <div class="blog-articles-list-featured">
+        <div class="blog-articles-list-featured-text-wrapper">
+          <h2 class="blog-articles-list-featured-title">
+            {{ featured.title }}
+          </h2>
+        </div>
+        <div class="blog-articles-list-featured-image-wrapper">
+          <div class="blog-articles-list-featured-image-wrapper-inner">
+            <img class="blog-articles-list-featured-image" :src="featured.img" :alt="featured.alt">
+          </div>
+        </div>
+        <div class="blog-articles-list-featured-text-wrapper">
+          <div class="blog-articles-list-featured-summary">
+            {{ featured.description }}
+          </div>
+          <div class="blog-articles-list-featured-meta">
+            <p>{{ formatDate(featured.updatedAt) }}</p>
+            <p>{{ featured.readtime }} min read</p>
+          </div>
         </div>
       </div>
-      <div class="blog-articles-list-featured-text-wrapper">
-        <div class="blog-articles-list-featured-summary">
-          {{ featured.description }}
-        </div>
-        <div class="blog-articles-list-featured-meta">
-          <p>{{ formatDate(featured.updatedAt) }}</p>
-          <p>{{ featured.readtime }} min read</p>
-        </div>
-      </div>
-    </div>
+    </NuxtLink>
     <div class="blog-articles-list-all">
       <ul>
         <li v-for="article of articles" :key="article.slug">
@@ -75,6 +77,10 @@ export default {
 
 $breakpoint-to-column: 50rem; //800px
 $breakpoint-to-tablet: 75rem; //1200px
+
+.blog-articles-link {
+  text-decoration: none;
+}
 
 .blog-articles-wrapper {
   max-width: $maxScreen;
