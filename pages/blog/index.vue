@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="blog-articles-wrapper">
+    <MenuSection />
     <h1 class="blog-articles-header max-width-limit">
       Blog
     </h1>
@@ -74,7 +75,7 @@
 </template>
 <script>
 export default {
-  async asyncData ({ $content, params }) {
+  async asyncData ({ $content }) {
     const featured = await $content('blog')
       // .only(['title', 'slug', 'img'])
       .where({ highlighted: 1 })
@@ -128,6 +129,9 @@ export default {
 
 $breakpoint-to-column: 50rem; //800px
 $breakpoint-to-tablet: 75rem; //1200px
+#menu {
+  z-index: 2;
+}
 
 ul {
   list-style-type: none;
@@ -170,12 +174,12 @@ h3 {
 }
 .blog-articles-list-featured {
   @media only screen and (max-width: $breakpoint-to-column) {
-    padding-top: 7.25em
+    padding-top: 6.25em
   }
 
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10.6875rem;
+  padding-top: 8.6875rem;
 
   background-image: url('~/assets/images/blog-list-bg.jpg');
   // background-repeat: repeat-x;
