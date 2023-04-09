@@ -8,7 +8,7 @@
           {{ article.title }}
         </h1>
         <div class="article-meta">
-          <p>{{ formatDate(article.updatedAt) }}</p>
+          <p>{{ formatDate(article.date) }}</p>
           <p>{{ article.readtime }} min read</p>
         </div>
         <img class="article-hero-image" :src="article.img" :alt="article.alt">
@@ -34,14 +34,14 @@ export default {
 
     let [prev, next] = await $content('blog')
       .only(['title', 'slug', 'img'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('date', 'asc')
       .surround(params.slug)
       .fetch()
 
     if (!prev) {
       const prevArr = await $content('blog')
         .only(['title', 'slug', 'img'])
-        .sortBy('createdAt', 'desc')
+        .sortBy('date', 'desc')
         .limit(1)
         .fetch()
       prev = prevArr[0]
@@ -50,7 +50,7 @@ export default {
     if (!next) {
       const nextArr = await $content('blog')
         .only(['title', 'slug', 'img'])
-        .sortBy('createdAt', 'asc')
+        .sortBy('date', 'asc')
         .limit(1)
         .fetch()
       next = nextArr[0]

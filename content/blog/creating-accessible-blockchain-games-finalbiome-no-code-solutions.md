@@ -2,8 +2,9 @@
 title: "Creating Accessible Blockchain Games: How FinalBiome Simplifies Game Development with No-Code Solutions"
 description: A detailed look at FinalBiome's no-code game development tools, empowering creators of all skill levels to build web3-enabled games and tap into the potential of blockchain technology.
 img: finalbiome-bridges-the-gap-between-web3-and-traditional-games.png
-alt: my first blog post
-readtime: 5
+alt: "Creating Accessible Blockchain Games: How FinalBiome Simplifies Game Development with No-Code Solutions"
+readtime: 3
+date: 2023-04-13
 ---
 
 ## Introduction

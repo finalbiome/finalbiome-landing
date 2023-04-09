@@ -28,7 +28,7 @@
           </div>
         </NuxtLink>
         <div class="blog-articles-list-featured-meta">
-          <p>{{ formatDate(featured.updatedAt) }}</p>
+          <p>{{ formatDate(featured.date) }}</p>
           <p>{{ featured.readtime }} min read</p>
         </div>
       </div>
@@ -49,7 +49,7 @@
                 </Nuxtlink>
               </div>
               <div class="blog-articles-list-featured-meta blog-articles-list-article-meta">
-                <p>{{ formatDate(article.createdAt) }}</p>
+                <p>{{ formatDate(article.date) }}</p>
                 <p>{{ article.readtime }} min read</p>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default {
     let articles = await $content('blog')
       .where({ highlighted: { $ne: 1 } })
       .without('body')
-      .sortBy('createdAt', 'asc')
+      .sortBy('date', 'asc')
       .fetch()
 
     articles = [].concat(...Array(6).fill(articles))
