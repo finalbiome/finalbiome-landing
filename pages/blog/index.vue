@@ -1,65 +1,75 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="blog-articles-wrapper">
-    <h1 class="blog-articles-header">
+    <h1 class="blog-articles-header max-width-limit">
       Blog
     </h1>
-    <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: featured.slug } }">
-      <div class="blog-articles-list-featured">
-        <div class="blog-articles-list-featured-text-wrapper">
+    <div class="blog-articles-list-featured max-width-limit">
+      <div class="blog-articles-list-featured-text-wrapper">
+        <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: featured.slug } }">
           <h2 class="blog-articles-list-featured-title">
             {{ featured.title }}
           </h2>
-        </div>
-        <div class="blog-articles-list-featured-image-wrapper">
+        </NuxtLink>
+      </div>
+      <div class="blog-articles-list-featured-image-wrapper">
+        <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: featured.slug } }">
           <div class="blog-articles-list-featured-image-wrapper-inner">
             <img class="blog-articles-list-featured-image" :src="featured.img" :alt="featured.alt">
           </div>
-        </div>
-        <div class="blog-articles-list-featured-text-wrapper">
+        </NuxtLink>
+      </div>
+      <div class="blog-articles-list-featured-text-wrapper">
+        <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: featured.slug } }">
           <div class="blog-articles-list-featured-summary">
             {{ featured.description }}
           </div>
-          <div class="blog-articles-list-featured-meta">
-            <p>{{ formatDate(featured.updatedAt) }}</p>
-            <p>{{ featured.readtime }} min read</p>
-          </div>
+        </NuxtLink>
+        <div class="blog-articles-list-featured-meta">
+          <p>{{ formatDate(featured.updatedAt) }}</p>
+          <p>{{ featured.readtime }} min read</p>
         </div>
       </div>
-    </NuxtLink>
-    <div class="blog-articles-list-all">
+    </div>
+    <div class="blog-articles-list-all max-width-limit">
       <ul>
         <li v-for="article of articlesLoaded" :key="article.slug">
-          <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-            <div class="blog-articles-list-article">
-              <div class="blog-articles-list-article-text-wrapper">
+          <div class="blog-articles-list-article">
+            <div class="blog-articles-list-article-text-wrapper">
+              <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                 <h3 class="blog-articles-list-article-title">
                   {{ article.title }}
                 </h3>
-                <div class="blog-articles-list-featured-summary">
+              </Nuxtlink>
+              <div class="blog-articles-list-featured-summary">
+                <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                   {{ article.description }}
-                </div>
-                <div class="blog-articles-list-featured-meta blog-articles-list-article-meta">
-                  <p>{{ formatDate(article.createdAt) }}</p>
-                  <p>{{ article.readtime }} min read</p>
-                </div>
+                </Nuxtlink>
               </div>
-              <div class="blog-articles-list-article-image-wrapper">
+              <div class="blog-articles-list-featured-meta blog-articles-list-article-meta">
+                <p>{{ formatDate(article.createdAt) }}</p>
+                <p>{{ article.readtime }} min read</p>
+              </div>
+            </div>
+            <div class="blog-articles-list-article-image-wrapper">
+              <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
                 <div class="blog-articles-list-article-image-wrapper-inner">
                   <img class="blog-articles-list-article-image" :src="article.img" :alt="article.alt">
                 </div>
-              </div>
+              </NuxtLink>
             </div>
-            <div class="article-bottom-line" />
-          </NuxtLink>
+          </div>
+          <div class="article-bottom-line" />
         </li>
       </ul>
       <div class="blog-articles-list-button-more">
         <v-btn v-if="!hideButton" class="btn-wp" large rounded @click.stop="loadMoreArticles()">
+          <img class="plus" :src="require(`~/assets/images/rounded-plus.svg`)" alt="Load more">
           Load more
         </v-btn>
       </div>
     </div>
+    <WhitepaperSection />
   </div>
 </template>
 <script>
@@ -101,6 +111,13 @@ export default {
 
       // if all articles are loaded, hide the button
       this.hideButton = this.articlesLoaded.length === this.articles.length
+
+      if (this.hideButton) {
+        // const el = document.querySelector('li:last-child > a > .article-bottom-line')
+        // el.style.display = 'none'
+        document.querySelector('#whitepaper-section').style['margin-top'] = 'calc(-3.125em - 1px)'
+        // console.log(el)
+      }
     }
   }
 }
@@ -124,43 +141,50 @@ h3 {
   line-height: 1.3;
 }
 
-.blog-articles-link {
-  text-decoration: none;
+.plus {
+  margin-right: .4em;
 }
 
-.blog-articles-wrapper {
-  max-width: $maxScreen;
-  margin-left: auto;
-  margin-right: auto;
+.blog-articles-link {
+  text-decoration: none;
+  color: unset;
+}
 
+.max-width-limit {
+  @media only screen and (max-width: $maxScreen) {
+    @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+    @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
+  }
+  // max-width: $maxScreen;
+  padding-left: calc((100vw - #{$maxScreen}) / 2 + 15.625rem);
+  padding-right: calc((100vw - #{$maxScreen}) / 2 + 15.625rem);
 }
 
 .blog-articles-header {
-  @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
-  @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
-
   padding-top: 8rem;
   margin-bottom: 0;
+  line-height: 115%;
+
+  position: relative;
+  z-index: 1;
 }
 .blog-articles-list-featured {
   @media only screen and (max-width: $breakpoint-to-column) {
-    padding-top: 1.25em
+    padding-top: 7.25em
   }
-
-  @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
-  @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
 
   display: flex;
   flex-wrap: wrap;
-  padding-top: 4.6875rem;
+  padding-top: 10.6875rem;
 
   background-image: url('~/assets/images/blog-list-bg.jpg');
   // background-repeat: repeat-x;
   background-clip: border-box;
   background-size: 1920px 790px;
   background-position: bottom;
-  background-size: cover;
-  background-position: 0% 83%
+
+  position: relative;
+  margin-top: -6rem;
 }
 .blog-articles-list-featured-text-wrapper {
   @media only screen and (max-width: $breakpoint-to-tablet) {
@@ -198,7 +222,6 @@ h3 {
   }
   width: 50%;
   height: 0;
-  // flex-shrink: 2;
 }
 
 .blog-articles-list-featured-image-wrapper-inner {
@@ -206,6 +229,7 @@ h3 {
     height: unset;
   }
   position: relative;
+  z-index: 1;
   height: 460px;
   // width: 100%;
   // aspect-ratio: 700 / 490;
@@ -225,9 +249,6 @@ h3 {
   object-fit: cover;
 }
 .blog-articles-list-all {
-  @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
-  @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
-
   background-color: $article-dark;
 }
 
@@ -291,4 +312,22 @@ li:last-child > a > .article-bottom-line {
 .blog-articles-list-button-more {
   text-align: center;
 }
+
+::v-deep(#whitepaper) {
+  position: static;
+  // padding-top: 1em;
+}
+
+#whitepaper-section {
+  background-image: url('~/assets/images/grass-bg.jpg');
+  background-repeat: repeat-x;
+  background-clip: border-box;
+  background-size: 1920px 332px;//3840px 664px;
+  // background-position: top;
+  background-position: 100% -10%;
+  padding-top: 16em;
+
+  // margin-top: calc(-3.125em - 1px);
+}
+
 </style>
