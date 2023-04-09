@@ -29,7 +29,7 @@
     </NuxtLink>
     <div class="blog-articles-list-all">
       <ul>
-        <li v-for="article of articles" :key="article.slug">
+        <li v-for="article of articlesLoaded" :key="article.slug">
           <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
             <div class="blog-articles-list-article">
               <div class="blog-articles-list-article-text-wrapper">
@@ -54,6 +54,11 @@
           </NuxtLink>
         </li>
       </ul>
+      <div class="blog-articles-list-button-more">
+        <v-btn v-if="!hideButton" class="btn-wp" large rounded @click.stop="loadMoreArticles()">
+          Load more
+        </v-btn>
+      </div>
     </div>
   </div>
 </template>
@@ -66,21 +71,36 @@ export default {
       .without('body')
       .fetch()
 
-    const articles = await $content('blog')
+    let articles = await $content('blog')
       .where({ highlighted: { $ne: 1 } })
       .without('body')
       .sortBy('createdAt', 'asc')
       .fetch()
 
+    articles = [].concat(...Array(6).fill(articles))
+
     return {
       featured: featured[0],
-      articles: [].concat(...Array(5).fill(articles))
+      articles
     }
+  },
+  data: () => ({
+    articlesLoaded: [],
+    hideButton: false
+  }),
+  created () {
+    this.loadMoreArticles()
   },
   methods: {
     formatDate (date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
+    },
+    loadMoreArticles () {
+      this.articlesLoaded = this.articles.slice(0, this.articlesLoaded.length + 5)
+
+      // if all articles are loaded, hide the button
+      this.hideButton = this.articlesLoaded.length === this.articles.length
     }
   }
 }
@@ -249,9 +269,11 @@ li:first-child {
   margin-top: calc(3.125em - 1px);
   margin-bottom: calc(3.125em - 1px);
 }
-li:last-child > .article-bottom-line {
+li:last-child > a > .article-bottom-line {
   @media only screen and (max-width: $breakpoint-to-column) {
     display: block;
+    margin-top: calc(2.5em - 1px);
+    margin-bottom: calc(2.5em - 1px);
   }
 }
 
@@ -265,5 +287,8 @@ li:last-child > .article-bottom-line {
   }
   width: 76%;
   padding-top: 2.5em
+}
+.blog-articles-list-button-more {
+  text-align: center;
 }
 </style>
