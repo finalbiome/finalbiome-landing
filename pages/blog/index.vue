@@ -30,13 +30,27 @@
     <div class="blog-articles-list-all">
       <ul>
         <li v-for="article of articles" :key="article.slug">
-          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-            <img :src="article.img" style="width: 50vw;">
-            <div>
-              <h2>{{ article.title }}</h2>
-              <!-- <p>by {{ article.author.name }}</p> -->
-              <p>{{ article.description }}</p>
+          <NuxtLink class="blog-articles-link" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <div class="blog-articles-list-article">
+              <div class="blog-articles-list-article-text-wrapper">
+                <h3 class="blog-articles-list-article-title">
+                  {{ article.title }}
+                </h3>
+                <div class="blog-articles-list-featured-summary">
+                  {{ article.description }}
+                </div>
+                <div class="blog-articles-list-featured-meta blog-articles-list-article-meta">
+                  <p>{{ formatDate(article.createdAt) }}</p>
+                  <p>{{ article.readtime }} min read</p>
+                </div>
+              </div>
+              <div class="blog-articles-list-article-image-wrapper">
+                <div class="blog-articles-list-article-image-wrapper-inner">
+                  <img class="blog-articles-list-article-image" :src="article.img" :alt="article.alt">
+                </div>
+              </div>
             </div>
+            <div class="article-bottom-line" />
           </NuxtLink>
         </li>
       </ul>
@@ -53,14 +67,14 @@ export default {
       .fetch()
 
     const articles = await $content('blog')
-      .only(['title', 'description', 'img', 'slug', 'author'])
       .where({ highlighted: { $ne: 1 } })
+      .without('body')
       .sortBy('createdAt', 'asc')
       .fetch()
 
     return {
       featured: featured[0],
-      articles
+      articles: [].concat(...Array(5).fill(articles))
     }
   },
   methods: {
@@ -77,6 +91,18 @@ export default {
 
 $breakpoint-to-column: 50rem; //800px
 $breakpoint-to-tablet: 75rem; //1200px
+
+ul {
+  list-style-type: none;
+  padding: unset;
+  margin: unset;
+}
+
+h3 {
+  @include fluid-type(font-size, $minScreen, $maxScreen, 1.125rem, 1.5625rem); // 18 - 25
+  margin-bottom: 0.4em;
+  line-height: 1.3;
+}
 
 .blog-articles-link {
   text-decoration: none;
@@ -97,6 +123,10 @@ $breakpoint-to-tablet: 75rem; //1200px
   margin-bottom: 0;
 }
 .blog-articles-list-featured {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    padding-top: 1.25em
+  }
+
   @include fluid-type(padding-left, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
   @include fluid-type(padding-right, $minScreen, $maxScreen, 1.875rem, 15.625rem); // 250 - 30
 
@@ -110,7 +140,7 @@ $breakpoint-to-tablet: 75rem; //1200px
   background-size: 1920px 790px;
   background-position: bottom;
   background-size: cover;
-  background-position: 0% 91%
+  background-position: 0% 83%
 }
 .blog-articles-list-featured-text-wrapper {
   @media only screen and (max-width: $breakpoint-to-tablet) {
@@ -128,6 +158,7 @@ $breakpoint-to-tablet: 75rem; //1200px
 }
 .blog-articles-list-featured-summary {
   color: $font-grey;
+  line-height: 1.361875;
 }
 .blog-articles-list-featured-meta {
   display: flex;
@@ -180,4 +211,59 @@ $breakpoint-to-tablet: 75rem; //1200px
   background-color: $article-dark;
 }
 
+.blog-articles-list-article {
+  @media only screen and (max-width: $breakpoint-to-tablet) {
+    flex-direction: column-reverse;
+  }
+  display: flex;
+  column-gap: 3.125em;
+}
+
+li:first-child {
+  @media only screen and (max-width: $breakpoint-to-tablet) {
+    padding-top: 3.125em;
+  }
+  @media only screen and (max-width: $breakpoint-to-column) {
+    padding-top: 0em;
+  }
+  padding-top: 8.8125em;
+}
+
+.blog-articles-list-article-image-wrapper {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    width: 100%;
+    padding-top: 2.5em;
+  }
+  width: 21.25rem;
+}
+
+.blog-articles-list-article-image {
+  width: 100%;
+  border-radius: 1.25em;
+}
+.article-bottom-line {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    display: none;
+  }
+  border: 1px solid $article-bottom-line;
+  margin-top: calc(3.125em - 1px);
+  margin-bottom: calc(3.125em - 1px);
+}
+li:last-child > .article-bottom-line {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    display: block;
+  }
+}
+
+.blog-articles-list-article-meta {
+  padding-bottom: unset;
+}
+.blog-articles-list-article-text-wrapper {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    width: 100%;
+    padding-top: 1.25em
+  }
+  width: 76%;
+  padding-top: 2.5em
+}
 </style>
