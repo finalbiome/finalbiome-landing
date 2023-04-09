@@ -4,6 +4,7 @@ description: An introduction to the FinalBiome platform, highlighting its potent
 img: finalbiome-bridges-the-gap-between-web3-and-traditional-games.png
 alt: my first blog post
 readtime: 7
+highlighted: 1
 ---
 
 ## Introduction
