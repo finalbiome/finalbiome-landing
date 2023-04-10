@@ -1,3 +1,6 @@
+import getSiteMeta from './utils/getSiteMeta'
+const meta = getSiteMeta()
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -10,19 +13,18 @@ export default {
       lang: 'en'
     },
     meta: [
+      ...meta,
       { charset: 'utf-8' },
+      { name: 'HandheldFriendly', content: 'True' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Decentralized game deployment platform' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'og-type', property: 'og:type', content: 'website' },
-      { hid: 'og-title', property: 'og:title', content: 'finalbiome' },
-      { hid: 'og-desc', property: 'og:description', content: 'Decentralized game deployment platform' },
-      { hid: 'og-image', property: 'og:image', content: 'https://finalbiome.net/finalbiome-preview1200x630.jpg' },
-      { hid: 'og-url', property: 'og:url', content: 'https://finalbiome.net/' },
-      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' }
+      { property: 'og:site_name', content: 'finalbiome' },
+
+      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@finalbiome' }
     ],
     link: [
-      { rel: 'canonical', href: 'https://finalbiome.net/' },
+      { hid: 'canonical', rel: 'canonical', href: 'https://finalbiome.net/' },
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },

@@ -74,7 +74,9 @@
     <WhitepaperSection />
   </div>
 </template>
+
 <script>
+import getSiteMeta from '@/utils/getSiteMeta'
 export default {
   async asyncData ({ $content }) {
     const featured = await $content('blog')
@@ -100,6 +102,30 @@ export default {
     articlesLoaded: [],
     hideButton: false
   }),
+  head () {
+    return {
+      meta: [
+        ...this.meta
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://finalbiome.net/blog/'
+        }
+      ]
+    }
+  },
+  computed: {
+    meta () {
+      const metaData = {
+        title: 'FinalBiome Blog',
+        url: 'https://finalbiome.net/blog/',
+        mainImage: `https://finalbiome.net/blog/${this.featured.img}`
+      }
+      return getSiteMeta(metaData)
+    }
+  },
   created () {
     this.loadMoreArticles()
   },
