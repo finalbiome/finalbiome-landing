@@ -1,7 +1,7 @@
 ---
 title: "Empowering Gamers and Developers: FinalBiome's Innovative Solution for Asset Transparency and Ownership"
 description: An in-depth examination of how FinalBiome's non-fungible assets (NFAs) offer greater transparency and ownership, and how this affects the gaming industry's approach to in-game assets.
-img: empowering-gamers-developers-finalbiome-asset-transparency-ownership.png
+img: empowering-gamers-developers-finalbiome-asset-transparency-ownership.jpg
 alt: "Empowering Gamers and Developers: FinalBiome's Innovative Solution for Asset Transparency and Ownership"
 readtime: 3
 date: 2023-04-11

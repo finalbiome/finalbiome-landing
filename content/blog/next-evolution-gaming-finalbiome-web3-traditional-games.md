@@ -1,7 +1,7 @@
 ---
 title: "The Next Evolution in Gaming: How FinalBiome Bridges the Gap Between Web3 and Traditional Games"
 description: An introduction to the FinalBiome platform, highlighting its potential to revolutionize both web3 and traditional gaming by removing common barriers and providing unique features for developers and gamers.
-img: finalbiome-bridges-the-gap-between-web3-and-traditional-games.png
+img: finalbiome-bridges-the-gap-between-web3-and-traditional-games.jpg
 alt: "The Next Evolution in Gaming: How FinalBiome Bridges the Gap Between Web3 and Traditional Games"
 readtime: 3
 date: 2023-04-06
