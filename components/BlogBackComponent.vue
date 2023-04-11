@@ -28,6 +28,7 @@ export default {
   align-items: center;
   column-gap: .8em;
   font-size: 0.9375em;
+  color: #fff;
 }
 
 a {
