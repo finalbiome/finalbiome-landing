@@ -11,7 +11,7 @@
           <p>{{ formatDate(article.date) }}</p>
           <p>{{ article.readtime }} min read</p>
         </div>
-        <img class="article-hero-image" :src="article.img" :alt="article.alt">
+        <img class="article-hero-image" :src="'/blog/' + article.img" :alt="article.alt">
         <div class="article-summary">
           {{ article.description }}
         </div>
