@@ -6,10 +6,11 @@
         finalbiome
       </div>
       <div class="header-second">
-        Decentralized game deployment platform
+        Effortless Web3 Game Creation and Monetization
       </div>
       <div class="header-third">
-        Deploying a game on the blockchain has never been so easy
+        Creating and porting games to web3 has never been so easy:<br>
+        effortless development, unchanged monetization
       </div>
       <div class="backgroung-text">
         <svg viewBox="0 0 85 40">
@@ -71,8 +72,9 @@ export default {
   @media only screen and (orientation: landscape) {
     // font-size: 25px;
     font-size: 2.32vh;
+    padding: 0 0em;
   }
-  font-size: 3.9vw;
+  font-size: 3vw;
 
   font-style: normal;
   font-weight: 300;
@@ -83,7 +85,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
 
-  width: 18em;
+  max-width: 34em;
+  padding: 0 2em;
+
 }
 .hero-outer-wrapper {
   background-image: url("~assets/images/hero-bg.jpg");

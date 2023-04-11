@@ -1,5 +1,5 @@
 <template>
-  <div class="whitepaper-wrapper">
+  <div id="whitepaper-section" class="whitepaper-wrapper">
     <div class="wp-header1">
       <h1 id="whitepaper">
         Whitepaper
