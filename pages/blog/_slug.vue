@@ -216,11 +216,11 @@ article {
   margin-bottom: 1.5em;
 }
 
-.icon.icon-link {
-  background-image: url('~assets/images/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-}
+// .icon.icon-link {
+//   background-image: url('~assets/images/icon-hashtag.svg');
+//   display: inline-block;
+//   width: 20px;
+//   height: 20px;
+//   background-size: 20px 20px;
+// }
 </style>
