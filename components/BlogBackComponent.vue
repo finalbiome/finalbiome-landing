@@ -29,6 +29,10 @@ export default {
   column-gap: .8em;
   font-size: 0.9375em;
   color: #fff;
+  transition: color .3s ease-in-out;
+}
+.blog-back:hover {
+  color: #3CEC3F;
 }
 
 a {
