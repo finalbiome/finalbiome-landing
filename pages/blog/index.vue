@@ -166,10 +166,17 @@ ul {
   margin: unset;
 }
 
+h2:hover {
+  color: $font-grey;
+}
+
 h3 {
   @include fluid-type(font-size, $minScreen, $maxScreen, 1.125rem, 1.5625rem); // 18 - 25
   margin-bottom: 0.4em;
   line-height: 1.3;
+  &:hover {
+    color: $font-grey;
+  }
 }
 
 .plus {

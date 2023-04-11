@@ -131,7 +131,6 @@ $breakpoint-to-shrink-lines: 87.5rem; //1400px
 
 .blog-navigator-button-inner {
   text-decoration: none;
-
 }
 
 .blog-navigator-text {
@@ -163,6 +162,10 @@ $breakpoint-to-shrink-lines: 87.5rem; //1400px
 
   width: 64.12%;
   max-height: 5.73vw;
+
+  &:hover {
+    color: $font-grey;
+  }
 }
 
 .blog-navigator-text.next {
