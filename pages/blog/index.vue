@@ -88,7 +88,7 @@ export default {
     let articles = await $content('blog')
       .where({ highlighted: { $ne: 1 } })
       .without('body')
-      .sortBy('date', 'asc')
+      .sortBy('date', 'desc')
       .fetch()
 
     articles = [].concat(...Array(6).fill(articles))
