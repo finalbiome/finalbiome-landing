@@ -9,7 +9,7 @@ date: 2023-04-11
 
 ## Introduction
 
-The gaming industry has been buzzing with excitement surrounding the integration of non-fungible tokens (NFTs) into virtual worlds. However, the current state of NFTs in games often leads to uncontrolled price changes and market manipulation by game developers, leaving gamers vulnerable to depreciation of their hard-earned assets. Enter FinalBiome, a cutting-edge platform that aims to address these concerns by introducing non-fungible assets (NFAs) for greater transparency, stability, and ownership in the gaming ecosystem.
+The gaming industry has been buzzing with excitement surrounding the integration of non-fungible tokens (NFTs) into virtual worlds. However, the current state of NFTs in games often leads to uncontrolled price changes and market manipulation by game developers, leaving gamers vulnerable to depreciation of their hard-earned assets. Enter FinalBiome, a cutting-edge platform that aims to address these concerns by introducing Non-Fungible Assets (NFAs) for greater transparency, stability, and ownership in the gaming ecosystem.
 
 ## The Challenges of NFTs in Gaming
 
