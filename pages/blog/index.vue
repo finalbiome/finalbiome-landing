@@ -65,13 +65,19 @@
         </li>
       </ul>
       <div class="blog-articles-list-button-more">
-        <v-btn v-if="!hideButton" class="btn-wp" large rounded @click.stop="loadMoreArticles()">
+        <v-btn
+          v-if="!hideButton"
+          class="btn-wp"
+          large
+          rounded
+          @click.stop="loadMoreArticles()"
+        >
           <img class="plus" :src="require(`~/assets/images/rounded-plus.svg`)" alt="Load more">
           Load more
         </v-btn>
       </div>
     </div>
-    <WhitepaperSection />
+    <WhitepaperSection :style="{'margin-top':hideButton ? 'calc(-3.125em - 1px)' : '0'}" />
   </div>
 </template>
 
@@ -85,13 +91,13 @@ export default {
       .without('body')
       .fetch()
 
-    let articles = await $content('blog')
+    const articles = await $content('blog')
       .where({ highlighted: { $ne: 1 } })
       .without('body')
       .sortBy('date', 'desc')
       .fetch()
 
-    articles = [].concat(...Array(6).fill(articles))
+    // articles = [].concat(...Array(6).fill(articles))
 
     return {
       featured: featured[0],
@@ -139,13 +145,6 @@ export default {
 
       // if all articles are loaded, hide the button
       this.hideButton = this.articlesLoaded.length === this.articles.length
-
-      if (this.hideButton) {
-        // const el = document.querySelector('li:last-child > a > .article-bottom-line')
-        // el.style.display = 'none'
-        document.querySelector('#whitepaper-section').style['margin-top'] = 'calc(-3.125em - 1px)'
-        // console.log(el)
-      }
     }
   }
 }
@@ -379,8 +378,7 @@ li:last-child > a > .article-bottom-line {
   // background-position: top;
   background-position: 100% -7%;
   padding-top: 16em;
-
-  // margin-top: calc(-3.125em - 1px);
 }
 
 </style>
+</whitepapersection>
