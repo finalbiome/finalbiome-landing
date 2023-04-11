@@ -347,6 +347,10 @@ li:last-child > a > .article-bottom-line {
   padding-top: 2.5em
 }
 .blog-articles-list-button-more {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    padding-top: 2.5em;
+    padding-bottom: 1em;
+  }
   text-align: center;
 }
 
@@ -356,12 +360,17 @@ li:last-child > a > .article-bottom-line {
 }
 
 #whitepaper-section {
+  @media only screen and (max-width: $breakpoint-to-column) {
+    background-position: 50% -7%;
+    padding-top: 10em;
+    margin-top: -3em;
+  }
   background-image: url('~/assets/images/grass-bg.jpg');
   background-repeat: repeat-x;
   background-clip: border-box;
   background-size: 1920px 332px;//3840px 664px;
   // background-position: top;
-  background-position: 100% -10%;
+  background-position: 100% -7%;
   padding-top: 16em;
 
   // margin-top: calc(-3.125em - 1px);
