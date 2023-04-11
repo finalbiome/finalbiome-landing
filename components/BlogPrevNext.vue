@@ -15,7 +15,7 @@
               {{ prev.title }}
             </div>
             <div class="blog-navigator-image-wrapper">
-              <img class="blog-navigator-image" :src="prev.img" :alt="prev.alt">
+              <img class="blog-navigator-image" :src="'/blog/' + prev.img" :alt="prev.alt">
             </div>
           </div>
         </NuxtLink>
@@ -29,7 +29,7 @@
         >
           <div class="blog-navigator-button-content">
             <div class="blog-navigator-image-wrapper">
-              <img class="blog-navigator-image next" :src="next.img" :alt="next.alt">
+              <img class="blog-navigator-image next" :src="'/blog/' + next.img" :alt="next.alt">
             </div>
             <div class="blog-navigator-text next">
               {{ next.title }}
