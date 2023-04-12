@@ -7,28 +7,28 @@
       <div class="p-partner-logo">
         <div>
           <a href="https://www.gamedevdao.com/" target="_blank" rel="noopener noreferrer" title="GameDev DAO">
-            <img class="p-gamedevdao-logo" src="~/assets/images/gamedevdao.png" alt="GameDev DAO logo">
+            <img class="p-gamedevdao-logo" src="~/assets/images/gamedevdao.png" alt="GameDev DAO logo" loading="lazy">
           </a>
         </div>
       </div>
       <div class="p-partner-logo">
         <a href="https://justforward.co/" target="_blank" rel="noopener noreferrer" title="Just Forward">
-          <img class="p-justforward-logo" src="~/assets/images/justforward.png" alt="Just Forward logo">
+          <img class="p-justforward-logo" src="~/assets/images/justforward.png" alt="Just Forward logo" loading="lazy">
         </a>
       </div>
       <div class="p-partner-logo">
         <a href="https://armadillo.fun/" target="_blank" rel="noopener noreferrer" title="Armadillo Games">
-          <img class="p-armadillo-logo" src="~/assets/images/armadillo-games.svg" alt="Armadillo Games logo">
+          <img class="p-armadillo-logo" src="~/assets/images/armadillo-games.svg" alt="Armadillo Games logo" loading="lazy">
         </a>
       </div>
       <div class="p-partner-logo">
         <a href="https://www.gdtalents.com/" target="_blank" rel="noopener noreferrer" title="GD-Tallents">
-          <img class="p-gd-talents-logo" src="~/assets/images/gd-talents.svg" alt="GD-Tallents logo">
+          <img class="p-gd-talents-logo" src="~/assets/images/gd-talents.svg" alt="GD-Tallents logo" loading="lazy">
         </a>
       </div>
       <div class="p-partner-logo">
         <a href="https://empera.network/" target="_blank" rel="noopener noreferrer" title="Empera">
-          <img class="p-empera-logo" src="~/assets/images/empera.svg" alt="Empera logo">
+          <img class="p-empera-logo" src="~/assets/images/empera.svg" alt="Empera logo" loading="lazy">
         </a>
       </div>
     </div>

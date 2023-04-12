@@ -17,12 +17,20 @@
           </div>
         </div>
         <div class="bf-image-cont bf2">
-          <img class="bf-image" src="~/assets/images/bf1.png" alt="Solution">
+          <picture>
+            <source srcset="~/assets/images/bf1.webp" type="image/webp">
+            <source srcset="~/assets/images/bf1.png" type="image/png">
+            <img class="bf-image" src="~/assets/images/bf1.png" alt="Solution" loading="lazy">
+          </picture>
         </div>
       </div>
       <div class="bf-wrapper-2 d-flex flex-wrap">
         <div class="bf-image-cont bf3">
-          <img class="bf-image" src="~/assets/images/bf2.png" alt="True Blockchain Paradigm">
+          <picture>
+            <source srcset="~/assets/images/bf2.webp" type="image/webp">
+            <source srcset="~/assets/images/bf2.png" type="image/png">
+            <img class="bf-image" src="~/assets/images/bf2.png" alt="True Blockchain Paradigm" loading="lazy">
+          </picture>
         </div>
         <div class="big-feature bf4">
           <h2>True Blockchain Paradigm</h2>
@@ -44,7 +52,11 @@
           </div>
         </div>
         <div class="bf-image-cont bf6">
-          <img class="bf-image" src="~/assets/images/bf3.png" alt="Rules Never Change">
+          <picture>
+            <source srcset="~/assets/images/bf3.webp" type="image/webp">
+            <source srcset="~/assets/images/bf3.png" type="image/png">
+            <img class="bf-image" src="~/assets/images/bf3.png" alt="Rules Never Change" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>

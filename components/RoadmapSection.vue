@@ -8,7 +8,11 @@
     <div class="roadmap-outer-wrapper max-width-limit">
       <div class="roadmap-line-wrapper">
         <div class="roadmap-line-inner-wrapper">
-          <img class="roadmap-image" src="~/assets/images/roadmap.png" alt="roadmap">
+          <picture>
+            <source srcset="~/assets/images/roadmap.webp" type="image/webp">
+            <source srcset="~/assets/images/roadmap.png" type="image/png">
+            <img class="roadmap-image" src="~/assets/images/roadmap.png" alt="roadmap" loading="lazy">
+          </picture>
         </div>
       </div>
       <!-- <div class="roadmap-faider-left" /> -->
