@@ -4,7 +4,11 @@
       <div class="pr-image-wrapper-outer">
         <div class="pr-image-wrapper-be">
           <div class="pr-image">
-            <img class="pr-pl-image" src="~/assets/images/finalbiome-app-admin.png" alt="FinalBiome Plugin">
+            <picture>
+              <source srcset="~/assets/images/finalbiome-app-admin.webp" type="image/webp">
+              <source srcset="~/assets/images/finalbiome-app-admin.png" type="image/png">
+              <img class="pr-pl-image" src="~/assets/images/finalbiome-app-admin.png" alt="FinalBiome Plugin" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -55,16 +59,32 @@
       <div class="pr-image-wrapper-outer">
         <div class="pr-image-wrapper">
           <div class="pr-image">
-            <img class="pr-app-image" src="~/assets/images/finalbiome-app-s1.png" alt="FinalBiome App Screen 1">
+            <picture>
+              <source srcset="~/assets/images/finalbiome-app-s1.webp" type="image/webp">
+              <source srcset="~/assets/images/finalbiome-app-s1.png" type="image/png">
+              <img class="pr-app-image" src="~/assets/images/finalbiome-app-s1.png" alt="FinalBiome App Screen 1" loading="lazy">
+            </picture>
           </div>
           <div class="pr-image">
-            <img class="pr-app-image" src="~/assets/images/finalbiome-app-s2.png" alt="FinalBiome App Screen 2">
+            <picture>
+              <source srcset="~/assets/images/finalbiome-app-s2.webp" type="image/webp">
+              <source srcset="~/assets/images/finalbiome-app-s2.png" type="image/png">
+              <img class="pr-app-image" src="~/assets/images/finalbiome-app-s2.png" alt="FinalBiome App Screen 2" loading="lazy">
+            </picture>
           </div>
           <div class="pr-image">
-            <img class="pr-app-image" src="~/assets/images/finalbiome-app-s3.png" alt="FinalBiome App Screen 3">
+            <picture>
+              <source srcset="~/assets/images/finalbiome-app-s3.webp" type="image/webp">
+              <source srcset="~/assets/images/finalbiome-app-s3.png" type="image/png">
+              <img class="pr-app-image" src="~/assets/images/finalbiome-app-s3.png" alt="FinalBiome App Screen 3" loading="lazy">
+            </picture>
           </div>
           <div class="pr-image">
-            <img class="pr-app-image" src="~/assets/images/finalbiome-app-s4.png" alt="FinalBiome App Screen 4">
+            <picture>
+              <source srcset="~/assets/images/finalbiome-app-s4.webp" type="image/webp">
+              <source srcset="~/assets/images/finalbiome-app-s4.png" type="image/png">
+              <img class="pr-app-image" src="~/assets/images/finalbiome-app-s4.png" alt="FinalBiome App Screen 4" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
