@@ -28,11 +28,11 @@
         ]
       },
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|svg)",
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=2592000"
+            "value": "max-age=31536000"
           }
         ]
       },
@@ -41,7 +41,7 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=2592000"
+            "value": "max-age=31536000"
           }
         ]
       },
