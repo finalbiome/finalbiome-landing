@@ -21,3 +21,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FINALBIOME_LANDING }}'
           channelId: live
           projectId: finalbiome-landing
+          firebase-tools: 11.30.0
