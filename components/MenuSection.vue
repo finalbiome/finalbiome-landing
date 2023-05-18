@@ -12,7 +12,7 @@
         <li><a href="/#solution" @click="onClickOutside">Solution</a></li>
         <li><a href="/#roadmap" @click="onClickOutside">Roadmap</a></li>
         <li><a href="/#whitepaper" @click="onClickOutside">Whitepaper</a></li>
-        <li><a href="/blog" @click="onClickOutside">Blog</a></li>
+        <li><a href="/blog/" @click="onClickOutside">Blog</a></li>
         <li>
           <div class="social-links">
             <SocialLinkComponent class="m-link" link-url="https://twitter.com/FinalBiome" network="twitter" />

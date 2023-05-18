@@ -2,7 +2,7 @@
   <div>
     <MenuSection />
     <article>
-      <BlogBackComponent class="blog-back" link-url="/blog" />
+      <BlogBackComponent class="blog-back" link-url="/blog/" />
       <div>
         <h1 id="blog-article-title">
           {{ article.title }}

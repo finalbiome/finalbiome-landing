@@ -381,4 +381,3 @@ li:last-child > a > .article-bottom-line {
 }
 
 </style>
-</whitepapersection>
