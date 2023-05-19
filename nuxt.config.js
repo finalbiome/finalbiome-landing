@@ -1,4 +1,6 @@
 import getSiteMeta from './utils/getSiteMeta'
+import getRoutes from './utils/getRoutes'
+
 const meta = getSiteMeta()
 
 export default {
@@ -67,8 +69,22 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
+
+  // https://sitemap.nuxtjs.org/usage/sitemap
+  sitemap: {
+    hostname: 'https://finalbiome.net',
+    gzip: true,
+    exclude: [
+      '/wait-list/'
+    ],
+    routes () {
+      return getRoutes()
+    },
+    trailingSlash: true
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
