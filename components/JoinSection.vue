@@ -5,7 +5,8 @@
     </div> -->
 
     <div class="join-buttons-wrap">
-      <ButtonComponent caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" />
+      <!-- <ButtonComponent caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" /> -->
+      <ButtonComponent caption="Whitepaper" link-url="https://finalbiome.docsend.com/view/5nvdbjsnatzwiuzm" />
       <v-btn class="btn-wp" large rounded @click.stop="dialog=true">
         Join Now
       </v-btn>

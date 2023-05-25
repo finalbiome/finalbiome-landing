@@ -12,8 +12,10 @@
             And for gamers makes onboarding a game as easy as logging into a conventional game.
           </div>
           <div class="solution-buttons">
-            <ButtonComponent class="sbtn" caption="Lightpaper" link-url="/FinalBiomeLightpaper.pdf" />
-            <ButtonComponent class="sbtn" caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" />
+            <!-- <ButtonComponent class="sbtn" caption="Lightpaper" link-url="/FinalBiomeLightpaper.pdf" /> -->
+            <ButtonComponent class="sbtn" caption="Lightpaper" link-url="https://finalbiome.docsend.com/view/rap2umzx2723h2ij" />
+            <!-- <ButtonComponent class="sbtn" caption="Whitepaper" link-url="/FinalBiomeWhitepaper.pdf" /> -->
+            <ButtonComponent class="sbtn" caption="Whitepaper" link-url="https://finalbiome.docsend.com/view/5nvdbjsnatzwiuzm" />
           </div>
         </div>
         <div class="bf-image-cont bf2">

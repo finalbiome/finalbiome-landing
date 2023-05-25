@@ -18,7 +18,8 @@
       </div>
       <div class="wp-download-wrapper">
         <div class="downloads-btn-wrapper">
-          <a href="/FinalBiomeLightpaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Lightpaper">
+          <!-- <a href="/FinalBiomeLightpaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Lightpaper"> -->
+          <a href="https://finalbiome.docsend.com/view/rap2umzx2723h2ij" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Lightpaper">
             <div class="wp-dl-rect-wrap">
               <div class="wp-dl-rect">
                 <div class="wp-dl-img">
@@ -33,7 +34,8 @@
               </div>
             </div>
           </a>
-          <a href="/FinalBiomeWhitepaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Whitepaper">
+          <!-- <a href="/FinalBiomeWhitepaper.pdf" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Whitepaper"> -->
+          <a href="https://finalbiome.docsend.com/view/5nvdbjsnatzwiuzm" target="_blank" rel="noopener noreferrer" title="Get FinalBiome Whitepaper">
             <div class="wp-dl-rect-wrap">
               <div class="wp-dl-rect">
                 <div class="wp-dl-img">
@@ -68,7 +70,7 @@
     </div>
     <div class="break" />
     <div class="footer">
-      Copyright © 2022 FinalBiome. All rights reserved.
+      Copyright © 2023 FinalBiome. All rights reserved.
     </div>
   </div>
 </template>
